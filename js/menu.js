@@ -28,7 +28,7 @@ $('.menu-title-container').on('click', function () {
       $($(this).siblings('.menu-mobile-ul')).addClass('menu-open-mobile')   
       $('.menu-mobile-ul').css('max-height','0')
       $($(this).siblings('.menu-mobile-ul')).css('max-height',$(this).siblings('.menu-mobile-ul')[0].scrollHeight)
-      $('.menu-background').css('background-image', `url(${$(this).parent().data('background')})`)
+      // $('.menu-background').css('background-image', `url(${$(this).parent().data('background')})`)
     }
   }
 })
