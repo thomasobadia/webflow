@@ -4,7 +4,6 @@ a{
 }
 
 .body-no-scroll{
-    opacity: 0;
     position: fixed;
 }
 
