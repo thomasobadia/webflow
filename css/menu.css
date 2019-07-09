@@ -3,6 +3,10 @@ a{
     color: #fff;
 }
 
+.body-no-scroll{
+    overflow: 0;
+    position: fixed;
+}
 
 
 @media (max-width: 991px){

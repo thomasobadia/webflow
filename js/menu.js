@@ -61,10 +61,12 @@ $('.burger-menu').on('click', function () {
       $('.themenu').removeClass('menu-close');
       $('.themenu').addClass('menu-open');
       $('.burger-menu img').attr('src','images-menu/menu-close.svg')
+      $('body').addClass('body-no-scroll')
     } else {
       $('.themenu').addClass('menu-close');
       $('.themenu').removeClass('menu-open');
       $('.burger-menu img').attr('src','images/navbar_burger.svg')
+      $('body').removeClass('body-no-scroll')
 
     }
 
