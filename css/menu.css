@@ -15,8 +15,7 @@ a{
         z-index: 1001;
         overflow: scroll;
         overscroll-behavior-y: contain;
-        will-change: margin-left ;
-        transition: margin-left ease-in-out 0.35s;
+        transition: transform ease-in-out 0.35s;
         transform-origin: right;
     }
     
@@ -35,10 +34,12 @@ a{
     }
         
     .menu-close{
-        margin-left: 100vw;
+        transform: translateX(100%)
+        /* margin-left: 100vw; */
     }
     .menu-open{
         margin-left: 0;
+        transform: translateX(0)
     }
     .menu-open-more{
         display: none;
