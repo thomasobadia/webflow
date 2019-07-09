@@ -14,7 +14,8 @@ a{
         width: 100vw;
         z-index: 1001;
         overflow: scroll;
-        overscroll-behavior-y: contain;
+        overscroll-behavior-y: auto;
+        -webkit-overflow-scrolling: touch;
         transition: transform ease-in-out 0.35s;
         transform-origin: right;
     }
@@ -60,6 +61,7 @@ a{
         width: 100%;
         z-index: 100000;
         margin-top: 15vh;
+        margin-bottom: 15vh;
         padding: 0 15vw;
     }
 
