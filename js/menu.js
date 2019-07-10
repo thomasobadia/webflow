@@ -73,7 +73,7 @@ $(document).ready(function(){
         $('.themenu').addClass('menu-close').removeClass('menu-open');
         $('.themenu').off('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd')
   
-        $('.burger-menu img').attr('src','images/navbar_burger.svg')
+        $('.burger-menu img').attr('src','https://thomasobadia.github.io/webflow-test/images/navbar_burger.svg')
         if($('body').hasClass('body-no-scroll')){
           $('body').removeClass('body-no-scroll')
           $(document).scrollTop(previousScroll)
@@ -126,7 +126,7 @@ $(document).ready(function(){
           $(".menu-title").removeClass('menu-title-open')
           $('.menu-container .menu-title').removeClass('menu-slide-in');
           $('.menu-background').css('display','none');
-          $('.burger-menu img').attr('src','images/navbar_burger.svg')
+          $('.burger-menu img').attr('src','https://thomasobadia.github.io/webflow-test/images/navbar_burger.svg')
         }, 200);
       }
   
