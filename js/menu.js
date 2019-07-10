@@ -66,7 +66,7 @@ $(document).ready(function(){
         $('.themenu').one('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function(){
           previousScroll = $(document).scrollTop()
           $('body').addClass('body-no-scroll') 
-          $('.burger-menu img').attr('src','images-menu/menu-close.svg')
+          $('.burger-menu img').attr('src','https://thomasobadia.github.io/webflow-test/images-menu/menu-close.svg')
         })
       
       } else {
@@ -84,10 +84,11 @@ $(document).ready(function(){
   
     } else {
       // OPEN MENU
+      
       if ($('.themenu').hasClass('menu-close')) {
         $('.menu-background').css('display','block');
         $('.menu-container').css('display','block');
-        $('.burger-menu img').attr('src','images-menu/menu-close.svg')
+        $('.burger-menu img').attr('src','https://thomasobadia.github.io/webflow-test/images-menu/menu-close.svg')
         $('.themenu').css('display','block');      
         $('.themenu').removeClass('menu-close').addClass('menu-open');
         if ($('.menu-container .menu-title').hasClass('menu-slide-in')) {
