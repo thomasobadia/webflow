@@ -7,6 +7,10 @@ a{
     position: fixed;
 }
 
+.menu{
+    display: block !important;
+}
+
 
 @media (max-width: 991px){
 
