@@ -192,7 +192,8 @@ $(document).ready(function(){
         console.log($(this).classList)
         return $('<a/>', {
             html: this.innerHTML,
-            class: $(this).classList
+            class: $(this).prop("classList"),
+            href:$(this).data('url')
         });
     });
 })
