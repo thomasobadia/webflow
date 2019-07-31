@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<!--  Last Published: Wed Jul 31 2019 14:57:22 GMT+0000 (UTC)  -->
+<html data-wf-page="5d3824d0c65d4009cf206b17" data-wf-site="5d08f77295e837533481db64">
+<head>
+  <meta charset="utf-8">
+  <title>Produit</title>
+  <meta content="Produit" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/henri-selmer.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon2.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/app_icon.png" rel="apple-touch-icon">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+  <link rel="stylesheet" href="https://thomasobadia.github.io/webflow-test/css/menu.css">
+  <style>
+.navbar-item{
+	mix-blend-mode: difference;
+}
+.wrapper-84{
+	mix-blend-mode: multiply;
+}
+html{
+	background-color:#090d12;
+}
+.navbar-blue-elment,.event-none{
+	pointer-events:none;
+  }
+.event{
+	pointer-events:auto;
+}
+@media screen and (min-width: 992px) {
+  .artist-item-slider:nth-child(2n+1){
+  	transform:translate(0, 4vw);
+  }
+  .artist-item:nth-child(3n+1){
+  	transform:translate(0, 4vw);
+  }
+  .artist-item:nth-child(3n+3){
+  	transform:translate(0, 7vw);
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 480px) {
+  .artist-item:nth-child(2n){
+  	transform:translate(0, 10vw);
+  }
+}
+ .artist-item,.album-cover{ 
+  -webkit-backface-visibility: hidden;
+ -moz-backface-visibility: hidden;
+ -webkit-transform: translate3d(0, 0, 0);
+ -moz-transform: translate3d(0, 0, 0);
+  }
+    .swiper-pagination-bullet{
+  background:#fff;
+  }
+  .swiper-pagination-light{
+    width:100%;
+    text-align:center;
+  }
+ .swiper-pagination-light .swiper-pagination-bullet{
+  background:#000;
+  }
+.swiper-pagination-bullet-active{
+  background:#4075e5 !important;
+  }
+.dropdown-filter-list::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
+}
+.dropdown-filter-list{
+  -webkit-overflow-scrolling: touch;
+}
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+  select::-ms-expand {
+    display: none;
+}
+</style>
+</head>
+<body class="body">
+  <nav class="navbar navbar-item">
+    <div class="navbar-logo"><a href="index.html" class="w-inline-block"><img src="images/Henri_Selmer_Paris_logo_white.svg" alt="" class="logo"></a></div>
+    <div class="navbar-content">
+      <div class="navbar-quickacces"><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_search.svg" alt=""></a><a href="formulaire-artiste.html" class="navbar-icon not-for-mobile w-inline-block"><img src="images/navbar_account.svg" alt=""></a><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_basket.svg" alt=""></a>
+        <a href="#" class="navbar-icon lang-selector not-for-mobile w-inline-block">
+          <div class="text-lang visible">FR</div>
+        </a>
+      </div>
+      <div class="navbar-burger-block"><a href="#" class="navbar-icon burger-menu w-inline-block"><img src="images/navbar_burger.svg" alt=""></a></div>
+    </div>
+    <div class="code-menu w-embed w-script">
+      <script>
+$(document).ready(function(){
+function getBodyScrollTop () { 
+const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+return scrollTop;
+}
+var prevScrollpos = getBodyScrollTop();
+window.onscroll = function() {
+  var currentScrollPos = getBodyScrollTop();
+  if(Math.abs(prevScrollpos-currentScrollPos)>10){
+  if (prevScrollpos >= currentScrollPos) {
+		$('.navbar-quickacces').fadeIn();
+  } else {
+		$('.navbar-quickacces').fadeOut();
+  }
+  }
+  prevScrollpos = currentScrollPos;
+}
+$('.burger-menu').hover(function(){
+$('.navbar-quickacces').fadeIn();
+});
+});
+</script>
+    </div>
+  </nav>
+  <nav class="navbar-blue-elment">
+    <div class="navbar-content">
+      <div class="navbar-quickacces">
+        <a href="#" class="navbar-icon event w-inline-block">
+          <div class="basket-notif">
+            <div class="text-block-10">2</div>
+          </div><img src="images/navbar_basket.svg" alt="" class="not-visible"></a>
+        <a href="#" class="navbar-icon lang-selector blue event not-for-mobile w-inline-block">
+          <div class="text-lang">FR</div>
+        </a>
+      </div>
+      <div class="navbar-burger-block"></div>
+    </div>
+    <div class="vertical-line"></div>
+  </nav>
+  <div class="event-none">
+    <div class="scroll-indicator progress">
+      <div class="scroll-bar">
+        <div class="scroll-progress"></div>
+      </div>
+      <div class="code-scroll_indicator w-embed w-script">
+        <script>
+$( document ).ready(function() {
+total_section= $('section').length;
+$('.total_section').html("0"+total_section);
+$( window ).scroll(scrolling);
+scrolling();
+function scrolling(){
+t=$(document).scrollTop()/($(document).height()-$(window).height())*100;
+$('.scroll-progress').css('height',t+'%');
+n_section=0;
+$('section').each(function(index){
+if($(this).offset().top<$(document).scrollTop()+$(window).height()/2){
+n_section=index+1;
+}
+$('.n_section').html("0"+n_section);
+});
+}
+});
+</script>
+      </div>
+    </div>
+    <div class="scroll-indicator navbar-item">
+      <div class="scroll-text total_section">01</div>
+      <div class="scroll-bar progress"></div>
+      <div class="scroll-text n_section">01</div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="w-embed">
+      <div class="themenu menu-close">
+        <div class="menu-background"></div>
+        <div class="menu-image-hover-container">
+          <div class="menu-image-hover"> <img src="" alt=""> </div>
+        </div>
+        <div class="menu-container">
+          <nav class="menu-container-list">
+            <div class="close-menu-title"><img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-back.svg" alt="">
+              <div>Menu</div>
+            </div>
+            <ul>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments.jpg">
+                <div class="menu-title-container">Instruments</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul menu-instruments">
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_1.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Saxophone</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="gamme/">
+                        <li> Sopranino</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Soprano</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Alto</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Tenor</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Barython</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Basse</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_2.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Clarinettes</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="gamme/">
+                        <li>Sib la</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Basse</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Mib</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Contr</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Contrebasse</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Alto</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_3.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Becs, Bocaux, Barils</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="accessoires">
+                        <li>Pour saxophone</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Pour clarinette</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_4.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Et aussi ...</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="accessoires">
+                        <li>Accessoires</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Etuis</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Produits dérivés</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Voir tout</li>
+                      </a>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques.jpg">
+                <div class="menu-title-container">Boutiques</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="revendeurs">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Liste des revendeurs</span> </li>
+                  </a>
+                  <a href="showroom.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Showroom (Paris)</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Instruments d'occasion</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_services.jpg">
+                <div class="menu-title-container">Services</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Enregistrer son instrument</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Demande d'information</span> </li>
+                  </a>
+                  <a href="beyond-the-sound-static.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Conseils et entretien</span> </li>
+                  </a>
+                  <a href="faq.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-4"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_4.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Foire aux questions</span> </li>
+                  </a>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends.jpg">
+                <div class="menu-title-container">Selmer & Friends</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="artistes.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Artistes de légende</span> </li>
+                  </a>
+                  <a href="artistes.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Artistes contemporains</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Selmer & vous</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison.jpg">
+                <div class="menu-title-container">Maison Selmer</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="histoire.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">L'histoire de la maison</span> </li>
+                  </a>
+                  <a href="missions.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Nos missions</span> </li>
+                  </a>
+                  <a href="ateliers.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Nos ateliers de production</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <a href="beyond-the-sound-static">
+                <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu-beyond-the-sound.jpg">
+                  <div class="menu-title-container">Beyond the Sound</div>
+                </li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-header-grey-product"><img src="images/missions-saxophone.png" alt="" class="product-header-img">
+    <div class="product-header-container">
+      <div class="title-typo-black">Saxophone</div>
+      <div class="title-black">ALto mib serie iii</div>
+      <div class="product-ref">REF: 431345678907</div>
+      <div class="text-black">D&#x27;une harmonique sonore remarquable, le Série III est un bijou de mécanique qui sert la qualité sonore de l&#x27;instrument : la justesse d&#x27;ensemble est équilibrée et l&#x27;aigu remarquablement étagé, grâce au mécanisme de double Do#.</div>
+      <div data-url="#" class="btn btn-header-product">
+        <div class="btn-content">
+          <div class="button-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+<path class="a" fill="#fff" d="M14,6.24a4.32,4.32,0,1,0,4.23,4.4v-.09A4.28,4.28,0,0,0,14,6.24Zm0,6.25a1.94,1.94,0,1,1,1.9-2v0A1.92,1.92,0,0,1,14,12.49Zm8-9.08A11.22,11.22,0,0,0,6.16,3.23L6,3.41A11.74,11.74,0,0,0,6,19.78H6L14,28l8-8.17A11.75,11.75,0,0,0,22,3.41ZM20.6,17.87l-.24.23L14,24.62,7.61,18.1a9.34,9.34,0,0,1,0-13,8.89,8.89,0,0,1,12.56-.41l.19.19a9.29,9.29,0,0,1,.23,13Z"></path></svg></div><div class="text-with-img">TROUVER UN revendeur</div></div></div></div></div><section><div class="gamme-topbar"><div class="gamme-title-container"><div class="gamme-title">Saxophone ALTO MIB SERIE III</div></div><a href="#" class="gamme-button-2 w-inline-block"><img src="images/icon_marker.svg" alt="" class="job-button-image"><div class="text-block-21">TROUVER UN REVENDEUR</div></a></div><a href="#" class="gamme-button-mobile-2 w-inline-block"><img src="images/icon_marker.svg" alt="" class="job-button-image"><div class="text-block-21">TROUVER UN REVENDEUR</div></a><div class="showroom-container"><div><div class="title-typo-black">Un mot sur</div><div class="title-black">Le concepteur</div><div class="text-black-2 text-width text-ateliers showroom-mt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt iure iure reprehenderit qui in ea voluptate reprehenderit qui in ea voluptate mollit anim id est laborum.</div><div class="w-embed"><audio controls="" src="https://28de62713662f01b6666-800ca2393241b8d788e2da1da4f0cead.r45.cf2.rackcdn.com/audios/Big%20Eyes.mp3"></audio></div></div></div></section><section class="section-dark-background"><div class="caracteristics-container"><div class="caracteristics-block"><div class="caracteristics-title"><div class="title title-small">caractéristiques techniques</div><div class="faq-sep"></div></div><div data-url="#" class="btn btn-white"><div class="btn-content"><div class="button-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+    <path fill="#ffffff" d="M16.19,17.92c-.42-.35-.81-.8-1.29-1.27a7.74,7.74,0,0,1-1-1.38c.56-1.92.82-3.75.24-4.63A1.33,1.33,0,0,0,13,10a1.19,1.19,0,0,0-1.21.77c-.48,1.06.23,3,1.07,4.59-.23.77-.52,1.6-.87,2.51-.2.5-.44,1-.68,1.47-2.38.95-3.85,2-4,3a1.18,1.18,0,0,0,.47,1.21,1.31,1.31,0,0,0,.78.29,1.34,1.34,0,0,0,.35-.05c1.11-.3,2.31-1.95,3.19-3.63a15.9,15.9,0,0,1,1.81-.58,21.13,21.13,0,0,1,2.1-.54,5.07,5.07,0,0,0,2.95,1.42,1.91,1.91,0,0,0,1.54-.66,1.05,1.05,0,0,0,.29-1.35C20.18,17.66,18.59,17.48,16.19,17.92ZM8.54,22.78a.31.31,0,0,1-.23,0c-.12-.09-.12-.14-.08-.2,0-.35.73-1,2.18-1.71A4.72,4.72,0,0,1,8.54,22.78ZM12.68,11.2a.26.26,0,0,1,.29-.15.51.51,0,0,1,.37.15,4.22,4.22,0,0,1-.1,2.65,4.38,4.38,0,0,1-.56-2.65Zm.82,7.37-.88.26c.1-.2.19-.41.27-.58.21-.56.45-1.12.64-1.71a8.46,8.46,0,0,0,.65.83c.26.29.52.56.78.82C14.5,18.3,14,18.42,13.5,18.57Zm6.16.53a1,1,0,0,1-.78.32,3,3,0,0,1-1.58-.62c1.69-.23,2.65-.06,2.36.3Zm4.78-12L18.06.65A2.18,2.18,0,0,0,16.53,0H5.08A2.1,2.1,0,0,0,3.56.65a2.15,2.15,0,0,0-.64,1.53V25.82A2.16,2.16,0,0,0,5.06,28H22.92a2.15,2.15,0,0,0,2.16-2.17h0V8.63A2.17,2.17,0,0,0,24.44,7.1Zm-1.22.53H18.49a1,1,0,0,1-1-1V1.92Zm-.3,19.1H5.07a.92.92,0,0,1-.91-.91V2.18a1,1,0,0,1,.27-.65.9.9,0,0,1,.64-.26h11.2V6.66A2.24,2.24,0,0,0,18.49,8.9h5.33V25.82a.89.89,0,0,1-.89.91h0Z"></path>
+</svg></div>
+          <div class="text-with-img">Voir la fiche technique</div>
+        </div>
+      </div>
+    </div>
+    <div class="caracteristics-container-list">
+      <div class="caracteristics-item">
+        <div class="text-black">FInition du corps</div>
+        <div class="text-white">Vernis doré</div>
+      </div>
+      <div class="caracteristics-item">
+        <div class="text-black">Gravure</div>
+        <div class="text-white">Oui</div>
+      </div>
+      <div class="caracteristics-item">
+        <div class="text-black">FInition du clétage</div>
+        <div class="text-white">Vernis doré</div>
+      </div>
+      <div class="caracteristics-item">
+        <div class="text-black">Bocal supplémentaire</div>
+        <div class="text-white">Non</div>
+      </div>
+      <div class="caracteristics-item">
+        <div class="text-black">Corps</div>
+        <div class="text-white">Laiton</div>
+      </div>
+      <div class="caracteristics-item">
+        <div class="text-black">Résonateurs</div>
+        <div class="text-white">Métal</div>
+      </div>
+    </div>
+    <div class="caracteristics-block-accessories">
+      <div>
+        <div class="title title-small">vendu avec</div>
+        <div class="faq-sep"></div>
+      </div>
+      <div>
+        <div class="text-grey-carateristics">(6)</div>
+      </div>
+      <div class="carateristics-arrows">
+        <div class="arrow_left arrow arrow-caracteristics-left w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.986,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.986,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M15.209,20.794 L19.214,16.468 C19.438,16.238 19.920,16.158 20.183,16.414 C20.446,16.669 20.445,17.154 20.180,17.407 L17.246,20.581 L26.375,20.581 C26.743,20.581 27.042,20.886 27.042,21.263 C27.042,21.641 26.743,21.946 26.375,21.946 L17.246,21.946 L20.180,25.119 C20.445,25.373 20.462,25.876 20.183,26.113 C19.926,26.333 19.447,26.342 19.214,26.059 L15.208,21.733 C15.039,21.558 14.906,21.099 15.209,20.794 Z"></path>
+</svg></div>
+        <div class="arrow_right arrow arrow-caracteristics-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.985,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.985,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M25.862,20.799 L22.201,16.498 C21.994,16.268 21.554,16.189 21.314,16.443 C21.073,16.697 21.075,17.179 21.317,17.431 L23.999,20.587 L15.652,20.587 C15.316,20.587 15.042,20.891 15.042,21.266 C15.042,21.641 15.316,21.945 15.652,21.945 L23.999,21.945 L21.317,25.100 C21.075,25.352 21.060,25.852 21.314,26.088 C21.550,26.306 21.987,26.316 22.201,26.034 L25.862,21.733 C26.018,21.559 26.139,21.102 25.862,20.799 Z"></path>
+</svg></div>
+      </div>
+    </div>
+    <div class="caracteristics-slider swiper-container">
+      <div class="caracteristics-slider-container swiper-wrapper">
+        <div class="swiper-slide caracteristics-slide">
+          <div class="caracteristics-image"><img src="images/missions-saxophone.png" alt="" class="caracteristics-slide-bg"></div>
+          <div class="text-white">Etui référence Alto Henri SELMER</div>
+        </div>
+        <div class="swiper-slide caracteristics-slide">
+          <div class="caracteristics-image"><img src="images/missions-saxophone.png" alt="" class="caracteristics-slide-bg"></div>
+          <div class="text-white">Etui référence Alto Henri SELMER</div>
+        </div>
+        <div class="swiper-slide caracteristics-slide">
+          <div class="caracteristics-image"><img src="images/missions-saxophone.png" alt="" class="caracteristics-slide-bg"></div>
+          <div class="text-white">Etui référence Alto Henri SELMER</div>
+        </div>
+        <div class="swiper-slide caracteristics-slide">
+          <div class="caracteristics-image"><img src="images/missions-saxophone.png" alt="" class="caracteristics-slide-bg"></div>
+          <div class="text-white">Etui référence Alto Henri SELMER</div>
+        </div>
+        <div class="swiper-slide caracteristics-slide">
+          <div class="caracteristics-image"><img src="images/missions-saxophone.png" alt="" class="caracteristics-slide-bg"></div>
+          <div class="text-white">Etui référence Alto Henri SELMER</div>
+        </div>
+        <div class="swiper-slide caracteristics-slide">
+          <div class="caracteristics-image"><img src="images/missions-saxophone.png" alt="" class="caracteristics-slide-bg"></div>
+          <div class="text-white">Etui référence Alto Henri SELMER</div>
+        </div>
+      </div>
+      <div class="code-slider-image w-embed w-script">
+        <script>
+  var accesoriesSwiper = new Swiper('.caracteristics-slider.swiper-container', {
+    // Navigation arrows
+    speed: 1000,
+    parallax: true,
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 0
+        },
+        990: {
+            slidesPerView: 3,
+            spaceBetween: 50
+        }
+    },
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    spaceBetween: 100,
+    navigation: {
+        nextEl: '.arrow-caracteristics-right',
+        prevEl: '.arrow-caracteristics-left',
+        disabledClass: 'disable'
+    },
+});
+  </script>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="section-grey">
+    <div class="options-container">
+      <div class="options-title">
+        <div class="caracteristics-title">
+          <div class="title-black title-small">EN OPTION</div>
+          <div class="faq-sep"></div>
+        </div>
+        <div class="options-arrow">
+          <div class="arrow_left arrow arrow-caracteristics-left w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.986,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.986,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M15.209,20.794 L19.214,16.468 C19.438,16.238 19.920,16.158 20.183,16.414 C20.446,16.669 20.445,17.154 20.180,17.407 L17.246,20.581 L26.375,20.581 C26.743,20.581 27.042,20.886 27.042,21.263 C27.042,21.641 26.743,21.946 26.375,21.946 L17.246,21.946 L20.180,25.119 C20.445,25.373 20.462,25.876 20.183,26.113 C19.926,26.333 19.447,26.342 19.214,26.059 L15.208,21.733 C15.039,21.558 14.906,21.099 15.209,20.794 Z"></path>
+</svg></div>
+          <div class="arrow_right arrow arrow-caracteristics-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.985,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.985,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M25.862,20.799 L22.201,16.498 C21.994,16.268 21.554,16.189 21.314,16.443 C21.073,16.697 21.075,17.179 21.317,17.431 L23.999,20.587 L15.652,20.587 C15.316,20.587 15.042,20.891 15.042,21.266 C15.042,21.641 15.316,21.945 15.652,21.945 L23.999,21.945 L21.317,25.100 C21.075,25.352 21.060,25.852 21.314,26.088 C21.550,26.306 21.987,26.316 22.201,26.034 L25.862,21.733 C26.018,21.559 26.139,21.102 25.862,20.799 Z"></path>
+</svg></div>
+        </div>
+      </div>
+      <div class="options-slider-container swiper-container">
+        <div class="swiper-wrapper">
+          <div class="product-other swiper-slide">
+            <div class="accessoire-list-img-other slider-img"><img src="images/bec3.png" alt="" class="accessoire-list-img"></div>
+            <div class="options-item-title">Bocal saxophone</div>
+            <div class="options-item-subtitle">This is some text inside of a div block.</div>
+          </div>
+          <div class="product-other swiper-slide">
+            <div class="accessoire-list-img-other slider-img"><img src="images/bec3.png" alt="" class="accessoire-list-img"></div>
+            <div class="options-item-title">Bocal saxophone</div>
+            <div class="options-item-subtitle">This is some text inside of a div block.</div>
+          </div>
+          <div class="product-other swiper-slide">
+            <div class="accessoire-list-img-other slider-img"><img src="images/bec3.png" alt="" class="accessoire-list-img"></div>
+            <div class="options-item-title">Bocal saxophone</div>
+            <div class="options-item-subtitle">This is some text inside of a div block.</div>
+          </div>
+          <div class="product-other swiper-slide">
+            <div class="accessoire-list-img-other slider-img"><img src="images/bec3.png" alt="" class="accessoire-list-img"></div>
+            <div class="options-item-title">Bocal saxophone</div>
+            <div class="options-item-subtitle">This is some text inside of a div block.</div>
+          </div>
+        </div>
+        <div class="code-slider-image w-embed w-script">
+          <script>
+  var accesoriesSwiper = new Swiper('.options-slider-container.swiper-container', {
+    // Navigation arrows
+    speed: 1000,
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10
+        },
+        990: {
+            slidesPerView: 3,
+        }
+    },
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.arrow-caracteristics-right',
+        prevEl: '.arrow-caracteristics-left',
+        disabledClass: 'disable'
+    },
+});
+  </script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="audio-section-container">
+      <div data-playlist="https://thomasobadia.github.io/mp3-player-perlin/sound.mp3,https://thomasobadia.github.io/mp3-player-perlin/sound-2.mp3,https://thomasobadia.github.io/mp3-player-perlin/sound-3.mp3" data-title="&quot;A fuego&quot;,&quot;Bolero&quot;,&quot;Lac des cygnes&quot;" data-artist="Marcus Miller,Tchaikowski,Maurice Ravel" class="audio-full-container">
+        <div class="audio-prev">
+          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="21px">
+<path fill-rule="evenodd" fill="rgb(64, 117, 229)" d="M19.518,20.664 C19.387,20.735 19.240,20.773 19.091,20.773 C18.914,20.756 18.747,20.686 18.609,20.573 L4.855,11.492 C4.757,11.426 4.673,11.343 4.608,11.245 C4.327,10.828 4.438,10.264 4.855,9.984 L18.609,0.903 C18.890,0.741 19.237,0.741 19.518,0.903 C19.814,1.060 19.999,1.367 20.000,1.702 L20.000,19.865 C19.999,20.200 19.814,20.507 19.518,20.664 ZM18.182,3.391 L6.991,10.784 L18.182,18.176 L18.182,3.391 ZM0.909,20.773 C0.407,20.773 0.000,20.367 0.000,19.865 L0.000,1.702 C0.000,1.200 0.407,0.794 0.909,0.794 C1.411,0.794 1.818,1.200 1.818,1.702 L1.818,19.865 C1.818,20.367 1.411,20.773 0.909,20.773 Z"></path>
+</svg></div>
+        </div>
+        <div class="audio-next">
+          <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="21px">
+<path fill-rule="evenodd" fill="rgb(64, 117, 229)" d="M19.091,20.773 C18.588,20.773 18.182,20.367 18.182,19.865 L18.182,1.702 C18.182,1.200 18.588,0.794 19.091,0.794 C19.593,0.794 20.000,1.200 20.000,1.702 L20.000,19.865 C20.000,20.367 19.593,20.773 19.091,20.773 ZM15.146,11.492 L1.390,20.573 C1.253,20.686 1.086,20.756 0.909,20.773 C0.760,20.773 0.613,20.735 0.482,20.664 C0.186,20.507 0.001,20.200 -0.000,19.865 L-0.000,1.702 C0.001,1.367 0.186,1.060 0.482,0.903 C0.763,0.741 1.109,0.741 1.390,0.903 L15.146,9.984 C15.562,10.264 15.673,10.828 15.393,11.245 C15.328,11.343 15.244,11.426 15.146,11.492 ZM1.818,3.391 L1.818,18.176 L13.009,10.784 L1.818,3.391 Z"></path>
+</svg></div>
+        </div>
+        <div class="audio-full-overlay">
+          <div class="audio-timer">00:00</div>
+          <div class="audio-full-button"></div>
+          <div class="audio-title">&quot; A fuego &quot;</div>
+          <div class="audio-artiste">Claude Delangle</div>
+        </div><img src="images/bubble.svg" alt="" class="audio-full-bubble"><img src="images/saxop.png" alt="" class="audio-full-instrument">
+        <div class="audio-element w-embed"><svg xmlns:svg="http://www.w3.org/2000/svg" viewbox="0 0 60 60">
+  <g id="container" class="marks"></g>
+</svg>
+          <audio id="audio" type="audio/mpeg"></audio></div>
+      </div>
+    </div>
+  </section>
+  <section class="section-dark-background">
+    <div class="caracteristics-title-container">
+      <div class="product-artists-arrows">
+        <div class="arrow_left arrow arrow-product-left w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.986,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.986,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M15.209,20.794 L19.214,16.468 C19.438,16.238 19.920,16.158 20.183,16.414 C20.446,16.669 20.445,17.154 20.180,17.407 L17.246,20.581 L26.375,20.581 C26.743,20.581 27.042,20.886 27.042,21.263 C27.042,21.641 26.743,21.946 26.375,21.946 L17.246,21.946 L20.180,25.119 C20.445,25.373 20.462,25.876 20.183,26.113 C19.926,26.333 19.447,26.342 19.214,26.059 L15.208,21.733 C15.039,21.558 14.906,21.099 15.209,20.794 Z"></path>
+</svg></div>
+        <div class="arrow_right arrow arrow-product-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.985,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.985,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M25.862,20.799 L22.201,16.498 C21.994,16.268 21.554,16.189 21.314,16.443 C21.073,16.697 21.075,17.179 21.317,17.431 L23.999,20.587 L15.652,20.587 C15.316,20.587 15.042,20.891 15.042,21.266 C15.042,21.641 15.316,21.945 15.652,21.945 L23.999,21.945 L21.317,25.100 C21.075,25.352 21.060,25.852 21.314,26.088 C21.550,26.306 21.987,26.316 22.201,26.034 L25.862,21.733 C26.018,21.559 26.139,21.102 25.862,20.799 Z"></path>
+</svg></div>
+      </div>
+      <div>
+        <div class="title-typo-small">Ils jouent</div>
+        <div class="title title-medium">cet instrument</div>
+      </div>
+    </div>
+    <div class="product-artist-slider swiper-container">
+      <div class="swiper-wrapper">
+        <a href="https://henri-selmer.webflow.io/artiste/miller" class="artist-item-slider swiper-slide w-inline-block">
+          <div class="artist-list-img"></div>
+          <div class="artist-list-text">
+            <div class="artist-list-title-typo">Marcus</div>
+            <div class="artist-list-title">Miller</div>
+          </div>
+        </a>
+        <a href="https://henri-selmer.webflow.io/artiste/miller" class="artist-item-slider swiper-slide w-inline-block">
+          <div class="artist-list-img"></div>
+          <div class="artist-list-text">
+            <div class="artist-list-title-typo">Marcus</div>
+            <div class="artist-list-title">Miller</div>
+          </div>
+        </a>
+        <a href="https://henri-selmer.webflow.io/artiste/miller" class="artist-item-slider swiper-slide w-inline-block">
+          <div class="artist-list-img"></div>
+          <div class="artist-list-text">
+            <div class="artist-list-title-typo">Marcus</div>
+            <div class="artist-list-title">Miller</div>
+          </div>
+        </a>
+        <a href="https://henri-selmer.webflow.io/artiste/miller" class="artist-item-slider swiper-slide w-inline-block">
+          <div class="artist-list-img"></div>
+          <div class="artist-list-text">
+            <div class="artist-list-title-typo">Marcus</div>
+            <div class="artist-list-title">Miller</div>
+          </div>
+        </a>
+        <a href="https://henri-selmer.webflow.io/artiste/miller" class="artist-item-slider swiper-slide w-inline-block">
+          <div class="artist-list-img"></div>
+          <div class="artist-list-text">
+            <div class="artist-list-title-typo">Marcus</div>
+            <div class="artist-list-title">Miller</div>
+          </div>
+        </a>
+        <a href="https://henri-selmer.webflow.io/artiste/miller" class="artist-item-slider swiper-slide w-inline-block">
+          <div class="artist-list-img"></div>
+          <div class="artist-list-text">
+            <div class="artist-list-title-typo">Marcus</div>
+            <div class="artist-list-title">Miller</div>
+          </div>
+        </a>
+      </div>
+      <div class="code-slider-image w-embed w-script">
+        <script>
+  var artistsSwiper = new Swiper ('.product-artist-slider.swiper-container', {
+  	// Navigation arrows
+    speed:1000,
+    parallax:true,
+    breakpoints: {
+        480: {
+            slidesPerView: 1,
+        },
+        990 : {
+        spaceBetween:50,
+        }
+    },
+    spaceBetween:100,
+    slidesPerView:3,
+    slidesPerGroup:1,
+    navigation: {
+      nextEl: '.arrow-product-right',
+      prevEl: '.arrow-product-left',
+      disabledClass:'disable'
+    },
+    });
+  </script>
+      </div>
+    </div>
+  </section>
+  <section class="section-product-comment">
+    <div class="comment-swiper swiper-container">
+      <div class="arrows arrows-comment">
+        <div class="arrow_left comment-arrow-left arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.986,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.986,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M15.209,20.794 L19.214,16.468 C19.438,16.238 19.920,16.158 20.183,16.414 C20.446,16.669 20.445,17.154 20.180,17.407 L17.246,20.581 L26.375,20.581 C26.743,20.581 27.042,20.886 27.042,21.263 C27.042,21.641 26.743,21.946 26.375,21.946 L17.246,21.946 L20.180,25.119 C20.445,25.373 20.462,25.876 20.183,26.113 C19.926,26.333 19.447,26.342 19.214,26.059 L15.208,21.733 C15.039,21.558 14.906,21.099 15.209,20.794 Z"></path>
+</svg></div>
+        <div class="arrow_right comment-arrow-right arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 44 44" xml:space="preserve">
+<path fill-rule="evenodd" class="arrow_stroke" stroke="rgb(191, 191, 191)" stroke-width="1.5px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M21.031,1.266 C32.077,1.266 41.031,10.220 41.031,21.266 C41.031,32.311 32.077,41.266 21.031,41.266 C9.985,41.266 1.031,32.311 1.031,21.266 C1.031,10.220 9.985,1.266 21.031,1.266 Z"></path>
+<path fill-rule="evenodd" class="arrow_fill" fill="rgb(191, 191, 191)" d="M25.862,20.799 L22.201,16.498 C21.994,16.268 21.554,16.189 21.314,16.443 C21.073,16.697 21.075,17.179 21.317,17.431 L23.999,20.587 L15.652,20.587 C15.316,20.587 15.042,20.891 15.042,21.266 C15.042,21.641 15.316,21.945 15.652,21.945 L23.999,21.945 L21.317,25.100 C21.075,25.352 21.060,25.852 21.314,26.088 C21.550,26.306 21.987,26.316 22.201,26.034 L25.862,21.733 C26.018,21.559 26.139,21.102 25.862,20.799 Z"></path>
+</svg></div>
+      </div>
+      <div class="swiper-wrapper comment-wrapper">
+        <div class="swiper-slide comment-slide">
+          <div class="comment-text">“Le Série III est un prolongement de ma personnalité qui me permet de <br>naviguer librement selon mes envies...”</div>
+          <div class="comment-bottom">
+            <div class="comment-author">David 36 ans</div>
+          </div>
+        </div>
+        <div class="swiper-slide comment-slide">
+          <div class="comment-text">“Lorem ipsum dolor sit amet”</div>
+          <div class="comment-bottom">
+            <div class="comment-author">René 63 ans</div>
+          </div>
+        </div>
+        <div class="swiper-slide comment-slide">
+          <div class="comment-text">“Fluctuat nec mergitur ...”</div>
+          <div class="comment-bottom">
+            <div class="comment-author">Bastien 21 ans</div>
+          </div>
+        </div>
+        <div class="swiper-slide comment-slide">
+          <div class="comment-text">“Alea jacta est ...”</div>
+          <div class="comment-bottom">
+            <div class="comment-author">Pierre 36 ans</div>
+          </div>
+        </div>
+      </div>
+      <div class="code-slider-image w-embed w-script">
+        <script>
+  var mySwiper = new Swiper ('.comment-swiper.swiper-container', {
+  	// Navigation arrows
+    speed:1000,
+    slidesPerView:5,
+    keyboard:true,
+    effect: "fade",
+    fadeEffect: {
+    crossFade: true
+  	},
+    slidesPerGroup:1,
+    navigation: {
+      nextEl: '.comment-arrow-right',
+      prevEl: '.comment-arrow-left',
+      disabledClass:'disable'
+    },
+    });
+  </script>
+      </div>
+    </div>
+    <div class="comment-bkg"><img src="images/visuel_comment.jpg" srcset="images/visuel_comment-p-800.jpeg 800w, images/visuel_comment-p-1080.jpeg 1080w, images/visuel_comment.jpg 1173w" sizes="(max-width: 479px) 100vw, 85vw" alt="" class="img"></div>
+  </section>
+  <section class="section-crosssales">
+    <div class="wrapper">
+      <div class="title-black-2 center">découvrEZ aussi</div>
+      <div class="products-container">
+        <div class="product-other">
+          <div class="accessoire-list-img-other"><img src="images/bec3.png" alt="" class="accessoire-list-img"></div>
+          <div class="accessoire-list-title">BEC, Bocaux, barils</div>
+          <div class="accessoire-list-description">Modèle livré sans couvre-bec. Une seule vis de serrage. Cette ligature s&#x27;adapte sur tous les becs de saxophone alto en ébonite.</div>
+          <div class="accessoire-list-price">20.50 €</div>
+        </div>
+        <div class="product-other">
+          <div class="accessoire-list-img-other"><img src="images/missions-saxophone.png" alt="" class="accessoire-list-img"></div>
+          <div class="accessoire-list-title">Saxophone ALto mib serie iii</div>
+          <div class="accessoire-list-description">Modèle livré sans couvre-bec. Une seule vis de serrage. Cette ligature s&#x27;adapte sur tous les becs de saxophone alto en ébonite.</div>
+          <div class="accessoire-list-price">20.50 €</div>
+        </div>
+        <div class="product-other">
+          <div class="accessoire-list-img-other"><img src="images/missions-clarinette.png" alt="" class="accessoire-list-img"></div>
+          <div class="accessoire-list-title">Clarinette mib serie iii</div>
+          <div class="accessoire-list-description">Modèle livré sans couvre-bec. Une seule vis de serrage. Cette ligature s&#x27;adapte sur tous les becs de saxophone alto en ébonite.</div>
+          <div class="accessoire-list-price">20.50 €</div>
+        </div>
+        <div class="product-other">
+          <div class="accessoire-list-img-other"><img src="images/bec3.png" alt="" class="accessoire-list-img"></div>
+          <div class="accessoire-list-title">BEC, Bocaux, barils</div>
+          <div class="accessoire-list-description">Modèle livré sans couvre-bec. Une seule vis de serrage. Cette ligature s&#x27;adapte sur tous les becs de saxophone alto en ébonite.</div>
+          <div class="accessoire-list-price">20.50 €</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-title">Restez à l&#x27;écoute</div>
+    <div class="form-block-newsletter w-form">
+      <form id="email-form" name="email-form" data-name="Email Form" class="form"><input type="email" class="footer-newsletter-filed w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="Email" id="name-2"><input type="submit" value="Envoyer" data-wait="Please wait..." class="submit-button w-button"></form>
+      <div class="success-message w-form-done">
+        <div class="text-block-4">Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+    <div class="footer-rgpd">En renseignant votre adresse email, vous acceptez de recevoir nos offres commerciales par email et vous prenez connaissance de notre <a href="#" class="link-2">politique de confidentialité. </a> <br>Vous pouvez vous désinscrire à l&#x27;aide des liens de désinscription ou en nous contactant ici.</div>
+    <div class="footer-links"><a href="formulaire-contact.html" class="footer-link-text">Formulaire de contact</a><a href="job-list.html" class="footer-link-text">Offres d&#x27;emploi</a><a href="faq.html" class="footer-link-text">FAQ</a><a href="espace-pro-presse.html" class="footer-link-text">Espace Pro/Presse</a></div>
+    <div class="footer-bottom-links"><a href="#" class="footer-bottom-link">Mentions légales</a><a href="#" class="footer-bottom-link">Politique de confidentialité</a><a href="#" class="footer-bottom-link">Cookies</a><a href="#" class="footer-bottom-link">Gestion des données personnelles</a></div>
+  </footer>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/henri-selmer.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://thomasobadia.github.io/webflow-test/js/menu.js"></script>
+  <style>
+.btn path {
+  transition: all ease-in-out 500ms;
+}
+.btn path, .btn.btn-white path{
+    fill:#fff
+}
+.btn.btn-white-bg path,.btn.btn-secondary path {
+    fill:#000
+}
+.btn.btn-white-bg path ,.btn.btn-secondary:hover path {
+    fill:#fff
+}
+.arrow{
+ outline: 0px solid transparent;
+ }
+.arrow .arrow_stroke {
+stroke:rgb(191, 191, 191);
+}
+.arrow .arrow_fill {
+fill:rgb(191, 191, 191);
+}
+.arrow:hover .arrow_stroke {
+stroke:#4075e5;
+}
+.arrow:hover .arrow_fill {
+fill:#4075e5;
+}
+@media (min-width: 990px) {
+  .section-header-fixed{
+    position: fixed !important;
+  }
+  .section-header-absolute{
+    position: absolute !important;
+  }
+}
+</style>
+  <script>
+$(document).ready(function () {
+  	// Handle webflow links 
+  	$('[data-url]').replaceWith(function() {
+        console.log($(this).classList)
+        return $('<a/>', {
+            html: this.innerHTML,
+            class: $(this).prop("classList"),
+            href:$(this).data('url')
+        });
+    });
+  	// SCRIPT filtre sticky & ancres
+    if ($('body').hasClass('sticky-filter')) {
+        updateScroll()
+        updateClassActive()
+        $(document).on('scroll', function () {
+            updateScroll(), updateClassActive()
+        })
+        $(document).on('resize', function () {
+            updateScroll()
+        })
+        $('.blog-filters-link').on('click', function (e) {
+            scrollTo(e)
+        })
+    }
+  	// SCRIPT Intro animation
+  	if($('body').hasClass('animated-intro')){
+        updatePosition()
+        $(document).on('scroll', function(){updatePosition()})
+        introAnimation()
+    }
+})
+function introAnimation () {
+    if(window.matchMedia("(min-width:990px)").matches) {
+        if($(document).scrollTop() == 0){
+            $('body').addClass('body-no-overflow')
+            TweenMax.to($('.apparition-container'),1.5,{width: 70 +'vw', ease: Power2.easeOut, onComplete: function(){
+                disableAnimationContainer()
+                $('body').removeClass('body-no-overflow')
+            }} )
+            animateTypo()
+        } else{
+            disableAnimationContainer()
+            animateTypo()
+        }
+    } else {
+        disableAnimationContainer()
+        animateTypo()
+    }
+}
+function disableAnimationContainer(){
+    $('.apparition-container').css('width','auto')
+    $('.apparition-container').css('height','auto')
+    $('.apparition-container').css('position','static')
+}
+function animateTypo () {
+    TweenMax.to($('.title-typo-animation'),1.5,{x: 0 +'%', ease: Power2.easeOut, delay: 0 } )
+    TweenMax.to($('.title-typo-animation'),1.5, {autoAlpha:1 , ease: Power2.easeOut, delay: 0 } )
+    TweenMax.to($('.title-animation'),1.25,{x: 0 +'%', ease: Power2.easeOut, delay: 0.25  })
+    TweenMax.to($('.title-animation'),1.25,{autoAlpha:1 ,ease: Power2.easeOut, delay: 0.25  })
+}
+function updatePosition (){
+    if(window.matchMedia("(min-width:990px)").matches) {
+        let breakPoint = 50
+        let scrollFromTop = $(document).scrollTop() / window.innerHeight *100
+        let imageZoom = scrollFromTop * 30 / breakPoint + 70
+        let parallaxValue = (scrollFromTop-breakPoint) * (75-breakPoint) / (100 - breakPoint) + breakPoint
+				let alpha = 200 - scrollFromTop - breakPoint
+        if(scrollFromTop >= breakPoint){
+            $('.section-header-img').addClass('section-header-absolute')
+            $('.section-header-img').css('margin-top', parallaxValue +'vh')
+            $('.header-img').css('height','100vh')
+            $('.header-img').css('max-width','100%')
+            $('.header-img').css('width', '100vw')
+            $('.header-img').css('opacity',alpha/100)
+        }else{
+            $('.section-header-img').css('margin-top','0')
+            $('.header-img').css('height', imageZoom + 'vh')
+            $('.header-img').css('width', imageZoom + 'vw')
+            $('.section-header-img').removeClass('section-header-absolute')
+        }
+    }else {
+        $('.header-img').css('height','50vh')
+        $('.section-header-img').css('height','50vh')
+        $('.header-img-full').css('height','50vh')
+    }
+}
+function updateScroll() {
+    let scrollTop = $(window).scrollTop(),
+        elementOffset = $('.blog-list-top').offset().top,
+        distance = (elementOffset - scrollTop)
+    if (distance <= $(window).innerHeight() * 0.1) {
+        $('.navbar').fadeOut()
+        $('.navbar-blue-elment').fadeOut(200)
+    } else {
+        $('.navbar').fadeIn()
+        $('.navbar-blue-elment').fadeIn(200)
+    }
+}
+function scrollTo(e) {
+    let anchorNumber = e.target.dataset.anchor
+    let target = $(document).find(`[data-target='${anchorNumber}']`)
+    let targetTop = target.offset().top - 20 - $('.blog-list-top').height()
+    $([document.documentElement, document.body]).animate({
+        scrollTop: targetTop
+    }, {
+        queue: false,
+        duration: 300,
+        easing: 'swing'
+    });
+    updateClassActive()
+}
+function updateClassActive() {
+    let isActive
+    $('.blog-filters-link').each(function (index) {
+        let target = $(document).find(`[data-target='${index}']`)
+        let targetTop = target.offset().top - 200 - $('.blog-list-top').height()
+        if (Math.round($(window).scrollTop()) >= Math.round(targetTop)) {
+            isActive = index
+        }
+    })
+    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        isActive = $('.blog-filters-link').length - 1
+    }
+    if ($(window).scrollTop() < $(document).find(`[data-target='0']`).offset().top - 20 - $('.blog-list-top').height()) {
+        isActive = 0
+    }
+    $('.blog-filters-link').removeClass('active')
+    $(document).find(`[data-anchor='${isActive}']`).addClass('active')
+}
+</script>
+  <script>
+!function(t){var e=t.noise={};function n(t,e,n){this.x=t,this.y=e,this.z=n}n.prototype.dot2=function(t,e){return this.x*t+this.y*e},n.prototype.dot3=function(t,e,n){return this.x*t+this.y*e+this.z*n};var r=[new n(1,1,0),new n(-1,1,0),new n(1,-1,0),new n(-1,-1,0),new n(1,0,1),new n(-1,0,1),new n(1,0,-1),new n(-1,0,-1),new n(0,1,1),new n(0,-1,1),new n(0,1,-1),new n(0,-1,-1)],o=[151,160,137,91,90,15,131,13,201,95,96,53,194,233,7,225,140,36,103,30,69,142,8,99,37,240,21,10,23,190,6,148,247,120,234,75,0,26,197,62,94,252,219,203,117,35,11,32,57,177,33,88,237,149,56,87,174,20,125,136,171,168,68,175,74,165,71,134,139,48,27,166,77,146,158,231,83,111,229,122,60,211,133,230,220,105,92,41,55,46,245,40,244,102,143,54,65,25,63,161,1,216,80,73,209,76,132,187,208,89,18,169,200,196,135,130,116,188,159,86,164,100,109,198,173,186,3,64,52,217,226,250,124,123,5,202,38,147,118,126,255,82,85,212,207,206,59,227,47,16,58,17,182,189,28,42,223,183,170,213,119,248,152,2,44,154,163,70,221,153,101,155,167,43,172,9,129,22,39,253,19,98,108,110,79,113,224,232,178,185,112,104,218,246,97,228,251,34,242,193,238,210,144,12,191,179,162,241,81,51,145,235,249,14,239,107,49,192,214,31,181,199,106,157,184,84,204,176,115,121,50,45,127,4,150,254,138,236,205,93,222,114,67,29,24,72,243,141,128,195,78,66,215,61,156,180],i=new Array(512),a=new Array(512);e.seed=function(t){t>0&&t<1&&(t*=65536),(t=Math.floor(t))<256&&(t|=t<<8);for(var e=0;e<256;e++){var n;n=1&e?o[e]^255&t:o[e]^t>>8&255,i[e]=i[e+256]=n,a[e]=a[e+256]=r[n%12]}},e.seed(0);var u=.5*(Math.sqrt(3)-1),l=(3-Math.sqrt(3))/6,d=1/6;function s(t){return t*t*t*(t*(6*t-15)+10)}function c(t,e,n){return(1-n)*t+n*e}e.simplex2=function(t,e){var n,r,o=(t+e)*u,d=Math.floor(t+o),s=Math.floor(e+o),c=(d+s)*l,f=t-d+c,m=e-s+c;f>m?(n=1,r=0):(n=0,r=1);var g=f-n+l,h=m-r+l,p=f-1+2*l,y=m-1+2*l,v=a[(d&=255)+i[s&=255]],S=a[d+n+i[s+r]],M=a[d+1+i[s+1]],T=.5-f*f-m*m,w=.5-g*g-h*h,x=.5-p*p-y*y;return 70*((T<0?0:(T*=T)*T*v.dot2(f,m))+(w<0?0:(w*=w)*w*S.dot2(g,h))+(x<0?0:(x*=x)*x*M.dot2(p,y)))},e.simplex3=function(t,e,n){var r,o,u,l,s,c,f=(t+e+n)*(1/3),m=Math.floor(t+f),g=Math.floor(e+f),h=Math.floor(n+f),p=(m+g+h)*d,y=t-m+p,v=e-g+p,S=n-h+p;y>=v?v>=S?(r=1,o=0,u=0,l=1,s=1,c=0):y>=S?(r=1,o=0,u=0,l=1,s=0,c=1):(r=0,o=0,u=1,l=1,s=0,c=1):v<S?(r=0,o=0,u=1,l=0,s=1,c=1):y<S?(r=0,o=1,u=0,l=0,s=1,c=1):(r=0,o=1,u=0,l=1,s=1,c=0);var M=y-r+d,T=v-o+d,w=S-u+d,x=y-l+2*d,A=v-s+2*d,b=S-c+2*d,L=y-1+.5,q=v-1+.5,C=S-1+.5,E=a[(m&=255)+i[(g&=255)+i[h&=255]]],H=a[m+r+i[g+o+i[h+u]]],I=a[m+l+i[g+s+i[h+c]]],k=a[m+1+i[g+1+i[h+1]]],z=.6-y*y-v*v-S*S,B=.6-M*M-T*T-w*w,F=.6-x*x-A*A-b*b,P=.6-L*L-q*q-C*C;return 32*((z<0?0:(z*=z)*z*E.dot3(y,v,S))+(B<0?0:(B*=B)*B*H.dot3(M,T,w))+(F<0?0:(F*=F)*F*I.dot3(x,A,b))+(P<0?0:(P*=P)*P*k.dot3(L,q,C)))},e.perlin2=function(t,e){var n=Math.floor(t),r=Math.floor(e);t-=n,e-=r;var o=a[(n&=255)+i[r&=255]].dot2(t,e),u=a[n+i[r+1]].dot2(t,e-1),l=a[n+1+i[r]].dot2(t-1,e),d=a[n+1+i[r+1]].dot2(t-1,e-1),f=s(t);return c(c(o,l,f),c(u,d,f),s(e))},e.perlin3=function(t,e,n){var r=Math.floor(t),o=Math.floor(e),u=Math.floor(n);t-=r,e-=o,n-=u;var l=a[(r&=255)+i[(o&=255)+i[u&=255]]].dot3(t,e,n),d=a[r+i[o+i[u+1]]].dot3(t,e,n-1),f=a[r+i[o+1+i[u]]].dot3(t,e-1,n),m=a[r+i[o+1+i[u+1]]].dot3(t,e-1,n-1),g=a[r+1+i[o+i[u]]].dot3(t-1,e,n),h=a[r+1+i[o+i[u+1]]].dot3(t-1,e,n-1),p=a[r+1+i[o+1+i[u]]].dot3(t-1,e-1,n),y=a[r+1+i[o+1+i[u+1]]].dot3(t-1,e-1,n-1),v=s(t),S=s(e),M=s(n);return c(c(c(l,g,v),c(d,h,v),M),c(c(f,p,v),c(m,y,v),M),S)}}(this),noise.seed(Math.random());let t=0,container=document.getElementById("container"),el=document.getElementById("audio"),button=document.querySelector(".audio-full-button"),audioContainer=document.querySelector(".audio-full-container"),audioTimer=document.querySelector(".audio-timer"),titleText=document.querySelector(".audio-title"),artistText=document.querySelector(".audio-artiste"),playlist=audioContainer.dataset.playlist.split(","),audioTitle=audioContainer.dataset.title.split(","),audioArtist=audioContainer.dataset.artist.split(","),currentSong=0,init=!0,next=document.querySelector(".audio-next"),prev=document.querySelector(".audio-prev");el.src=playlist[0],el.load();const perlinMovement=(e,n)=>{let r=createLines();setInterval(()=>{let o=getVolume(e,n);for(let e=0;e<r.length;e++){let n=(1-noise.perlin2(t,.05*e))*o,i=scale(n,0,60,20,25);i<20&&(i=20),r[e].setAttribute("x2",i)}t+=.005},10)},scale=(t,e,n,r,o)=>(t-e)*(o-r)/(n-e)+r;function nextSong(){currentSong<playlist.length-1?(currentSong++,console.log(currentSong)):(currentSong=0,console.log("b")),audioTimer.innerHTML=formatTime(el.currentTime),titleText.innerHTML=audioTitle[currentSong],artistText.innerHTML=audioArtist[currentSong],el.src=playlist[currentSong],el.play()}function prevSong(){0==currentSong?currentSong=playlist.length-1:currentSong--,audioTimer.innerHTML=formatTime(el.currentTime),titleText.innerHTML=audioTitle[currentSong],artistText.innerHTML=audioArtist[currentSong],el.src=playlist[currentSong],el.play()}function formatTime(t){return minutes=Math.floor(t/60),minutes=minutes>=10?minutes:"0"+minutes,t=(t=Math.floor(t%60))>=10?t:"0"+t,minutes+":"+t}function initSound(t){if(init){var e=window.AudioContext||window.webkitAudioContext||!1;if(e){var n=new e,r=n.createMediaElementSource(el),o=n.createAnalyser();o.smoothingTimeConstant=.3,o.fftSize=1024,r.connect(o),r.connect(n.destination),setInterval(()=>{audioTimer.innerHTML=formatTime(el.currentTime)},1e3);var i=new Uint8Array(o.frequencyBinCount);perlinMovement(o,i),el.play(),init=!1}else alert("Sorry, but the Web Audio API is not supported by your browser. Please, consider upgrading to the latest version or downloading Google Chrome or Mozilla Firefox")}else el.paused?el.play():el.pause()}function createLines(){let t=[];for(let e=0;e<2;e+=.01){let n=document.createElementNS("http://www.w3.org/2000/svg","line");n.setAttribute("transform","rotate("+180*e+")"),n.setAttribute("x1","20"),n.setAttribute("y1","0"),n.setAttribute("y2","0"),n.setAttribute("x2",20),container.appendChild(n),t.push(n)}return t}function getVolume(t,e){return t.getByteFrequencyData(e),volume=Math.floor(Math.average(e)),volume}button.addEventListener("click",t=>{initSound(t.target)}),next.addEventListener("click",()=>{nextSong()}),prev.addEventListener("click",t=>{prevSong()}),Math.average=function(arguments){var t;arguments[0]instanceof Array?t=arguments[0]:"number"==typeof arguments[0]&&(t=arguments);for(var e=0,n=0;n<t.length;n++)e+=t[n];return e/t.length};
+</script>
+</body>
+</html>

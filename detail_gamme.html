@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!--  Last Published: Wed Jul 03 2019 12:49:41 GMT+0000 (UTC)  -->
-<html data-wf-page="5d0d0046e8ded0a4716f94b9" data-wf-site="5d08f77295e837533481db64">
+<!--  Last Published: Wed Jul 31 2019 14:57:22 GMT+0000 (UTC)  -->
+<html data-wf-page="5d31903390eed316f6cb2651" data-wf-site="5d08f77295e837533481db64">
 <head>
   <meta charset="utf-8">
   <title>Henry Selmer Paris</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/components.css" rel="stylesheet" type="text/css">
-  <link href="css/henry-selmer.css" rel="stylesheet" type="text/css">
+  <link href="css/henri-selmer.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -15,12 +15,18 @@
   <link href="images/favicon2.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/app_icon.png" rel="apple-touch-icon">
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+  <link rel="stylesheet" href="https://thomasobadia.github.io/webflow-test/css/menu.css">
   <style>
 .navbar-item{
 	mix-blend-mode: difference;
+}
+.wrapper-84{
+	mix-blend-mode: multiply;
 }
 html{
 	background-color:#090d12;
@@ -32,6 +38,9 @@ html{
 	pointer-events:auto;
 }
 @media screen and (min-width: 992px) {
+  .artist-item-slider:nth-child(2n+1){
+  	transform:translate(0, 4vw);
+  }
   .artist-item:nth-child(3n+1){
   	transform:translate(0, 4vw);
   }
@@ -53,16 +62,39 @@ html{
     .swiper-pagination-bullet{
   background:#fff;
   }
+  .swiper-pagination-light{
+    width:100%;
+    text-align:center;
+  }
+ .swiper-pagination-light .swiper-pagination-bullet{
+  background:#000;
+  }
 .swiper-pagination-bullet-active{
   background:#4075e5 !important;
   }
+.dropdown-filter-list::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
+}
+.dropdown-filter-list{
+  -webkit-overflow-scrolling: touch;
+}
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+  select::-ms-expand {
+    display: none;
+}
 </style>
 </head>
 <body class="body">
   <nav class="navbar navbar-item">
     <div class="navbar-logo"><a href="index.html" class="w-inline-block"><img src="images/Henri_Selmer_Paris_logo_white.svg" alt="" class="logo"></a></div>
     <div class="navbar-content">
-      <div class="navbar-quickacces"><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_search.svg" alt=""></a><a href="#" class="navbar-icon not-for-mobile w-inline-block"><img src="images/navbar_account.svg" alt=""></a><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_basket.svg" alt=""></a>
+      <div class="navbar-quickacces"><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_search.svg" alt=""></a><a href="formulaire-artiste.html" class="navbar-icon not-for-mobile w-inline-block"><img src="images/navbar_account.svg" alt=""></a><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_basket.svg" alt=""></a>
         <a href="#" class="navbar-icon lang-selector not-for-mobile w-inline-block">
           <div class="text-lang visible">FR</div>
         </a>
@@ -88,9 +120,6 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-$('.burger-menu').on('click',function(){
-$('.menu').fadeIn();
-});
 $('.burger-menu').hover(function(){
 $('.navbar-quickacces').fadeIn();
 });
@@ -114,9 +143,220 @@ $('.navbar-quickacces').fadeIn();
     <div class="vertical-line"></div>
   </nav>
   <div class="menu">
-    <div class="menu_open"><a href="index.html" class="menu-link">HOme</a><a href="beyond-the-sound.html" class="menu-link">Beyond the sound</a>
-      <div class="menu-link"><a href="artistes.html" class="menu-link">Artistes</a>
-        <div class="text-block-11"> - </div><a href="artistes-cms.html" class="menu-link">Artistes (CMS)</a></div><a href="accessoires.html" class="menu-link">accessoires</a><a href="https://henry-selmer.webflow.io/gamme/alto" class="menu-link">Gamme</a><a href="revendeurs.html" class="menu-link">revendeurs</a></div>
+    <div class="w-embed">
+      <div class="themenu menu-close">
+        <div class="menu-background"></div>
+        <div class="menu-image-hover-container">
+          <div class="menu-image-hover"> <img src="" alt=""> </div>
+        </div>
+        <div class="menu-container">
+          <nav class="menu-container-list">
+            <div class="close-menu-title"><img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-back.svg" alt="">
+              <div>Menu</div>
+            </div>
+            <ul>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments.jpg">
+                <div class="menu-title-container">Instruments</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul menu-instruments">
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_1.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Saxophone</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="gamme/">
+                        <li> Sopranino</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Soprano</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Alto</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Tenor</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Barython</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Basse</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_2.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Clarinettes</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="gamme/">
+                        <li>Sib la</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Basse</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Mib</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Contr</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Contrebasse</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Alto</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_3.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Becs, Bocaux, Barils</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="accessoires">
+                        <li>Pour saxophone</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Pour clarinette</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_4.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Et aussi ...</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="accessoires">
+                        <li>Accessoires</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Etuis</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Produits dérivés</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Voir tout</li>
+                      </a>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques.jpg">
+                <div class="menu-title-container">Boutiques</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="revendeurs">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Liste des revendeurs</span> </li>
+                  </a>
+                  <a href="showroom.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Showroom (Paris)</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Instruments d'occasion</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_services.jpg">
+                <div class="menu-title-container">Services</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Enregistrer son instrument</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Demande d'information</span> </li>
+                  </a>
+                  <a href="beyond-the-sound-static.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Conseils et entretien</span> </li>
+                  </a>
+                  <a href="faq.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-4"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_4.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Foire aux questions</span> </li>
+                  </a>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends.jpg">
+                <div class="menu-title-container">Selmer & Friends</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="artistes.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Artistes de légende</span> </li>
+                  </a>
+                  <a href="artistes.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Artistes contemporains</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Selmer & vous</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison.jpg">
+                <div class="menu-title-container">Maison Selmer</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="histoire.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">L'histoire de la maison</span> </li>
+                  </a>
+                  <a href="missions.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Nos missions</span> </li>
+                  </a>
+                  <a href="ateliers.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Nos ateliers de production</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <a href="beyond-the-sound-static">
+                <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu-beyond-the-sound.jpg">
+                  <div class="menu-title-container">Beyond the Sound</div>
+                </li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="event-none">
     <div class="scroll-indicator progress">
@@ -152,7 +392,7 @@ $('.n_section').html("0"+n_section);
     </div>
   </div>
   <section class="section-header-img">
-    <div data-w-id="91c47a1d-6fbd-44a1-36ac-4960e8cd1c0e" class="header-img">
+    <div class="header-img">
       <div class="h1">
         <div class="title-typo"></div>
         <div class="title"></div>
@@ -173,11 +413,180 @@ $('.n_section').html("0"+n_section);
       </div>
     </div>
     <div class="footer-rgpd">En renseignant votre adresse email, vous acceptez de recevoir nos offres commerciales par email et vous prenez connaissance de notre <a href="#" class="link-2">politique de confidentialité. </a> <br>Vous pouvez vous désinscrire à l&#x27;aide des liens de désinscription ou en nous contactant ici.</div>
-    <div class="footer-links"><a href="#" class="footer-link-text">Formulaire de contact</a><a href="#" class="footer-link-text">Offre d&#x27;emploi</a><a href="#" class="footer-link-text">FAQ</a><a href="#" class="footer-link-text">Espace Pro/Presse</a></div>
+    <div class="footer-links"><a href="formulaire-contact.html" class="footer-link-text">Formulaire de contact</a><a href="job-list.html" class="footer-link-text">Offres d&#x27;emploi</a><a href="faq.html" class="footer-link-text">FAQ</a><a href="espace-pro-presse.html" class="footer-link-text">Espace Pro/Presse</a></div>
     <div class="footer-bottom-links"><a href="#" class="footer-bottom-link">Mentions légales</a><a href="#" class="footer-bottom-link">Politique de confidentialité</a><a href="#" class="footer-bottom-link">Cookies</a><a href="#" class="footer-bottom-link">Gestion des données personnelles</a></div>
   </footer>
-  <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="js/henry-selmer.js" type="text/javascript"></script>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/henri-selmer.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://thomasobadia.github.io/webflow-test/js/menu.js"></script>
+  <style>
+.btn path {
+  transition: all ease-in-out 500ms;
+}
+.btn path, .btn.btn-white path{
+    fill:#fff
+}
+.btn.btn-white-bg path,.btn.btn-secondary path {
+    fill:#000
+}
+.btn.btn-white-bg path ,.btn.btn-secondary:hover path {
+    fill:#fff
+}
+.arrow{
+ outline: 0px solid transparent;
+ }
+.arrow .arrow_stroke {
+stroke:rgb(191, 191, 191);
+}
+.arrow .arrow_fill {
+fill:rgb(191, 191, 191);
+}
+.arrow:hover .arrow_stroke {
+stroke:#4075e5;
+}
+.arrow:hover .arrow_fill {
+fill:#4075e5;
+}
+@media (min-width: 990px) {
+  .section-header-fixed{
+    position: fixed !important;
+  }
+  .section-header-absolute{
+    position: absolute !important;
+  }
+}
+</style>
+  <script>
+$(document).ready(function () {
+  	// Handle webflow links 
+  	$('[data-url]').replaceWith(function() {
+        console.log($(this).classList)
+        return $('<a/>', {
+            html: this.innerHTML,
+            class: $(this).prop("classList"),
+            href:$(this).data('url')
+        });
+    });
+  	// SCRIPT filtre sticky & ancres
+    if ($('body').hasClass('sticky-filter')) {
+        updateScroll()
+        updateClassActive()
+        $(document).on('scroll', function () {
+            updateScroll(), updateClassActive()
+        })
+        $(document).on('resize', function () {
+            updateScroll()
+        })
+        $('.blog-filters-link').on('click', function (e) {
+            scrollTo(e)
+        })
+    }
+  	// SCRIPT Intro animation
+  	if($('body').hasClass('animated-intro')){
+        updatePosition()
+        $(document).on('scroll', function(){updatePosition()})
+        introAnimation()
+    }
+})
+function introAnimation () {
+    if(window.matchMedia("(min-width:990px)").matches) {
+        if($(document).scrollTop() == 0){
+            $('body').addClass('body-no-overflow')
+            TweenMax.to($('.apparition-container'),1.5,{width: 70 +'vw', ease: Power2.easeOut, onComplete: function(){
+                disableAnimationContainer()
+                $('body').removeClass('body-no-overflow')
+            }} )
+            animateTypo()
+        } else{
+            disableAnimationContainer()
+            animateTypo()
+        }
+    } else {
+        disableAnimationContainer()
+        animateTypo()
+    }
+}
+function disableAnimationContainer(){
+    $('.apparition-container').css('width','auto')
+    $('.apparition-container').css('height','auto')
+    $('.apparition-container').css('position','static')
+}
+function animateTypo () {
+    TweenMax.to($('.title-typo-animation'),1.5,{x: 0 +'%', ease: Power2.easeOut, delay: 0 } )
+    TweenMax.to($('.title-typo-animation'),1.5, {autoAlpha:1 , ease: Power2.easeOut, delay: 0 } )
+    TweenMax.to($('.title-animation'),1.25,{x: 0 +'%', ease: Power2.easeOut, delay: 0.25  })
+    TweenMax.to($('.title-animation'),1.25,{autoAlpha:1 ,ease: Power2.easeOut, delay: 0.25  })
+}
+function updatePosition (){
+    if(window.matchMedia("(min-width:990px)").matches) {
+        let breakPoint = 50
+        let scrollFromTop = $(document).scrollTop() / window.innerHeight *100
+        let imageZoom = scrollFromTop * 30 / breakPoint + 70
+        let parallaxValue = (scrollFromTop-breakPoint) * (75-breakPoint) / (100 - breakPoint) + breakPoint
+				let alpha = 200 - scrollFromTop - breakPoint
+        if(scrollFromTop >= breakPoint){
+            $('.section-header-img').addClass('section-header-absolute')
+            $('.section-header-img').css('margin-top', parallaxValue +'vh')
+            $('.header-img').css('height','100vh')
+            $('.header-img').css('max-width','100%')
+            $('.header-img').css('width', '100vw')
+            $('.header-img').css('opacity',alpha/100)
+        }else{
+            $('.section-header-img').css('margin-top','0')
+            $('.header-img').css('height', imageZoom + 'vh')
+            $('.header-img').css('width', imageZoom + 'vw')
+            $('.section-header-img').removeClass('section-header-absolute')
+        }
+    }else {
+        $('.header-img').css('height','50vh')
+        $('.section-header-img').css('height','50vh')
+        $('.header-img-full').css('height','50vh')
+    }
+}
+function updateScroll() {
+    let scrollTop = $(window).scrollTop(),
+        elementOffset = $('.blog-list-top').offset().top,
+        distance = (elementOffset - scrollTop)
+    if (distance <= $(window).innerHeight() * 0.1) {
+        $('.navbar').fadeOut()
+        $('.navbar-blue-elment').fadeOut(200)
+    } else {
+        $('.navbar').fadeIn()
+        $('.navbar-blue-elment').fadeIn(200)
+    }
+}
+function scrollTo(e) {
+    let anchorNumber = e.target.dataset.anchor
+    let target = $(document).find(`[data-target='${anchorNumber}']`)
+    let targetTop = target.offset().top - 20 - $('.blog-list-top').height()
+    $([document.documentElement, document.body]).animate({
+        scrollTop: targetTop
+    }, {
+        queue: false,
+        duration: 300,
+        easing: 'swing'
+    });
+    updateClassActive()
+}
+function updateClassActive() {
+    let isActive
+    $('.blog-filters-link').each(function (index) {
+        let target = $(document).find(`[data-target='${index}']`)
+        let targetTop = target.offset().top - 200 - $('.blog-list-top').height()
+        if (Math.round($(window).scrollTop()) >= Math.round(targetTop)) {
+            isActive = index
+        }
+    })
+    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        isActive = $('.blog-filters-link').length - 1
+    }
+    if ($(window).scrollTop() < $(document).find(`[data-target='0']`).offset().top - 20 - $('.blog-list-top').height()) {
+        isActive = 0
+    }
+    $('.blog-filters-link').removeClass('active')
+    $(document).find(`[data-anchor='${isActive}']`).addClass('active')
+}
+</script>
 </body>
 </html>

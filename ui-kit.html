@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<!--  Last Published: Wed Jul 31 2019 14:57:22 GMT+0000 (UTC)  -->
+<html data-wf-page="5d31903390eed3e66fcb26c7" data-wf-site="5d08f77295e837533481db64">
+<head>
+  <meta charset="utf-8">
+  <title>UI KIT</title>
+  <meta content="UI KIT" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/henri-selmer.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon2.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/app_icon.png" rel="apple-touch-icon">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+  <link rel="stylesheet" href="https://thomasobadia.github.io/webflow-test/css/menu.css">
+  <style>
+.navbar-item{
+	mix-blend-mode: difference;
+}
+.wrapper-84{
+	mix-blend-mode: multiply;
+}
+html{
+	background-color:#090d12;
+}
+.navbar-blue-elment,.event-none{
+	pointer-events:none;
+  }
+.event{
+	pointer-events:auto;
+}
+@media screen and (min-width: 992px) {
+  .artist-item-slider:nth-child(2n+1){
+  	transform:translate(0, 4vw);
+  }
+  .artist-item:nth-child(3n+1){
+  	transform:translate(0, 4vw);
+  }
+  .artist-item:nth-child(3n+3){
+  	transform:translate(0, 7vw);
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 480px) {
+  .artist-item:nth-child(2n){
+  	transform:translate(0, 10vw);
+  }
+}
+ .artist-item,.album-cover{ 
+  -webkit-backface-visibility: hidden;
+ -moz-backface-visibility: hidden;
+ -webkit-transform: translate3d(0, 0, 0);
+ -moz-transform: translate3d(0, 0, 0);
+  }
+    .swiper-pagination-bullet{
+  background:#fff;
+  }
+  .swiper-pagination-light{
+    width:100%;
+    text-align:center;
+  }
+ .swiper-pagination-light .swiper-pagination-bullet{
+  background:#000;
+  }
+.swiper-pagination-bullet-active{
+  background:#4075e5 !important;
+  }
+.dropdown-filter-list::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
+}
+.dropdown-filter-list{
+  -webkit-overflow-scrolling: touch;
+}
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+  select::-ms-expand {
+    display: none;
+}
+</style>
+</head>
+<body class="body">
+  <nav class="navbar navbar-item">
+    <div class="navbar-logo"><a href="index.html" class="w-inline-block"><img src="images/Henri_Selmer_Paris_logo_white.svg" alt="" class="logo"></a></div>
+    <div class="navbar-content">
+      <div class="navbar-quickacces"><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_search.svg" alt=""></a><a href="formulaire-artiste.html" class="navbar-icon not-for-mobile w-inline-block"><img src="images/navbar_account.svg" alt=""></a><a href="#" class="navbar-icon w-inline-block"><img src="images/navbar_basket.svg" alt=""></a>
+        <a href="#" class="navbar-icon lang-selector not-for-mobile w-inline-block">
+          <div class="text-lang visible">FR</div>
+        </a>
+      </div>
+      <div class="navbar-burger-block"><a href="#" class="navbar-icon burger-menu w-inline-block"><img src="images/navbar_burger.svg" alt=""></a></div>
+    </div>
+    <div class="code-menu w-embed w-script">
+      <script>
+$(document).ready(function(){
+function getBodyScrollTop () { 
+const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+return scrollTop;
+}
+var prevScrollpos = getBodyScrollTop();
+window.onscroll = function() {
+  var currentScrollPos = getBodyScrollTop();
+  if(Math.abs(prevScrollpos-currentScrollPos)>10){
+  if (prevScrollpos >= currentScrollPos) {
+		$('.navbar-quickacces').fadeIn();
+  } else {
+		$('.navbar-quickacces').fadeOut();
+  }
+  }
+  prevScrollpos = currentScrollPos;
+}
+$('.burger-menu').hover(function(){
+$('.navbar-quickacces').fadeIn();
+});
+});
+</script>
+    </div>
+  </nav>
+  <nav class="navbar-blue-elment">
+    <div class="navbar-content">
+      <div class="navbar-quickacces">
+        <a href="#" class="navbar-icon event w-inline-block">
+          <div class="basket-notif">
+            <div class="text-block-10">2</div>
+          </div><img src="images/navbar_basket.svg" alt="" class="not-visible"></a>
+        <a href="#" class="navbar-icon lang-selector blue event not-for-mobile w-inline-block">
+          <div class="text-lang">FR</div>
+        </a>
+      </div>
+      <div class="navbar-burger-block"></div>
+    </div>
+    <div class="vertical-line"></div>
+  </nav>
+  <div class="menu">
+    <div class="w-embed">
+      <div class="themenu menu-close">
+        <div class="menu-background"></div>
+        <div class="menu-image-hover-container">
+          <div class="menu-image-hover"> <img src="" alt=""> </div>
+        </div>
+        <div class="menu-container">
+          <nav class="menu-container-list">
+            <div class="close-menu-title"><img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-back.svg" alt="">
+              <div>Menu</div>
+            </div>
+            <ul>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments.jpg">
+                <div class="menu-title-container">Instruments</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul menu-instruments">
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_1.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Saxophone</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="gamme/">
+                        <li> Sopranino</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Soprano</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Alto</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Tenor</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Barython</li>
+                      </a>
+                      <a href="gamme/">
+                        <li> Basse</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_2.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Clarinettes</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="gamme/">
+                        <li>Sib la</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Basse</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Mib</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Contr</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Contrebasse</li>
+                      </a>
+                      <a href="gamme/">
+                        <li>Alto</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_3.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Becs, Bocaux, Barils</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="accessoires">
+                        <li>Pour saxophone</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Pour clarinette</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="menu-img-super-container">
+                      <div class="menu-img-container"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_instruments_4.jpg" alt=""> </div>
+                    </div>
+                    <div class="menu-open-more-mobile"> <span class="menu-subtitle menu-subtitle-after">Et aussi ...</span> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu-open-more-mobile.svg" alt="more"></div>
+                    <ul>
+                      <a href="accessoires">
+                        <li>Accessoires</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Etuis</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Produits dérivés</li>
+                      </a>
+                      <a href="accessoires">
+                        <li>Voir tout</li>
+                      </a>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques.jpg">
+                <div class="menu-title-container">Boutiques</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="revendeurs">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Liste des revendeurs</span> </li>
+                  </a>
+                  <a href="showroom.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Showroom (Paris)</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_boutiques_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Instruments d'occasion</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_services.jpg">
+                <div class="menu-title-container">Services</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Enregistrer son instrument</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Demande d'information</span> </li>
+                  </a>
+                  <a href="beyond-the-sound-static.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Conseils et entretien</span> </li>
+                  </a>
+                  <a href="faq.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-4"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_services_4.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Foire aux questions</span> </li>
+                  </a>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends.jpg">
+                <div class="menu-title-container">Selmer & Friends</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="artistes.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Artistes de légende</span> </li>
+                  </a>
+                  <a href="artistes.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Artistes contemporains</span> </li>
+                  </a>
+                  <a href="index.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_friends_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Selmer & vous</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison.jpg">
+                <div class="menu-title-container">Maison Selmer</div><img class="menu-open-more" src="https://thomasobadia.github.io/webflow-test/images-menu/open-more.svg" alt="">
+                <ul class="menu-mobile-ul">
+                  <a href="histoire.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-1"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_1.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">L'histoire de la maison</span> </li>
+                  </a>
+                  <a href="missions.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-2"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_2.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Nos missions</span> </li>
+                  </a>
+                  <a href="ateliers.html">
+                    <li>
+                      <div class="menu-img-super-container">
+                        <div class="menu-img-container delay-3"> <img src="https://thomasobadia.github.io/webflow-test/images-menu/menu_maison_3.jpg" alt=""> </div>
+                      </div><span class="menu-subtitle">Nos ateliers de production</span> </li>
+                  </a>
+                  <li style="border: none; padding: 0"></li>
+                </ul>
+              </li>
+              <a href="beyond-the-sound-static">
+                <li class="menu-title" data-background="https://thomasobadia.github.io/webflow-test/images-menu/menu-beyond-the-sound.jpg">
+                  <div class="menu-title-container">Beyond the Sound</div>
+                </li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section-header-title shop">
+    <div class="h1">
+      <div class="title-typo">Elements</div>
+      <div class="title">UI KIT</div>
+    </div>
+  </section>
+  <div class="section-white">
+    <div class="formulaire">
+      <div class="formulaire-itext-intro">Veuillez remplir le formulaire de création de fiche artiste<br>pour pouvoir être référencé(e) au mieux sur notre site.</div>
+      <div data-url="#" class="btn">
+        <div class="btn-content">
+          <div class="button-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Forme_830" data-name="Forme 830" class="cls-1" d="M3097.07,830.927A10,10,0,1,0,3100,838,9.632,9.632,0,0,0,3097.07,830.927ZM3096.4,844.4a9.061,9.061,0,0,1-12,.722q0.06-.6.12-1.579a1.637,1.637,0,0,1,.45-0.805,1.519,1.519,0,0,0,.43-0.821,1.553,1.553,0,0,0-.83-0.965,3.093,3.093,0,0,0-1.16-.583,2.783,2.783,0,0,1-1.08-.52c-0.47-.359-0.79-0.609-0.98-0.749h-0.34a9.987,9.987,0,0,1-.06-1.1,8.718,8.718,0,0,1,2.65-6.4,9.274,9.274,0,0,1,1.54-1.258q-0.1.274-.27,0.73a5.237,5.237,0,0,0-.35,1.329,0.645,0.645,0,0,0,.06.3,1.331,1.331,0,0,0,.26.29,4.818,4.818,0,0,1,.94-0.738c0.19-.113.43-0.251,0.73-0.413a1.191,1.191,0,0,0,.46-0.48,2.159,2.159,0,0,0,.17-0.948,0.723,0.723,0,0,0-.16-0.48,3.491,3.491,0,0,1-.29-0.393,9.013,9.013,0,0,1,3.31-.594c0.13,0,.25,0,0.38.007a1.227,1.227,0,0,0-.4.349,2.817,2.817,0,0,0-.46.913,0.447,0.447,0,0,1,.54.107,0.572,0.572,0,0,1,.17.369,0.738,0.738,0,0,1-.47.714,1.81,1.81,0,0,1-.8.159,1.263,1.263,0,0,0-.39-0.075,0.3,0.3,0,0,0-.32.353,1.4,1.4,0,0,0,.08.337,1.406,1.406,0,0,1,.08.337,0.976,0.976,0,0,1-.24.48,1.258,1.258,0,0,0-.24.393,0.446,0.446,0,0,0,.16.321,0.641,0.641,0,0,0,.44.155,0.5,0.5,0,0,0,.31-0.115,3.179,3.179,0,0,0,.3-0.274,2.658,2.658,0,0,1,1.01-.643,0.629,0.629,0,0,0,.27.33,1.041,1.041,0,0,0,.37.146,1.741,1.741,0,0,1,.11-0.369,0.652,0.652,0,0,1,.28-0.028,1.519,1.519,0,0,1,.81.4,1.115,1.115,0,0,1,.55.754,0.714,0.714,0,0,1-.48.436,3.9,3.9,0,0,1-.98-0.237,3.9,3.9,0,0,0-1.12-.238,4.064,4.064,0,0,0-.77.155,6.639,6.639,0,0,0-.66.194,7.07,7.07,0,0,0-.59.976,4.2,4.2,0,0,0-.48,1.809,1.956,1.956,0,0,0,.63,1.388,1.9,1.9,0,0,0,1.35.635,1.477,1.477,0,0,0,.55-0.119,1.634,1.634,0,0,1,.56-0.119,0.891,0.891,0,0,1,.8.477,1.543,1.543,0,0,1,.24.833,3.481,3.481,0,0,1-.28,1.19,3.279,3.279,0,0,0-.28,1.19,9.016,9.016,0,0,0,.17,1.222,7.3,7.3,0,0,0,.47,1.753,1.528,1.528,0,0,0,.93-0.373,2.353,2.353,0,0,0,.52-0.789c0.17-.442.31-0.782,0.41-1.019a4.671,4.671,0,0,1,.6-1.072c0.04-.055.21-0.242,0.5-0.559q0.48-.512.78-0.881a3.651,3.651,0,0,0,1.02-2.011,2.535,2.535,0,0,0-.76-1.829c-0.29-.275-0.5-0.481-0.65-0.619a3.88,3.88,0,0,1-.58-0.686v-0.4a6.177,6.177,0,0,1,1.48.742c0.65,0.4.98,0.607,0.98,0.607a0.6,0.6,0,0,0,.48-0.234,0.558,0.558,0,0,0,.16-0.362,0.817,0.817,0,0,0-.13-0.5,1.049,1.049,0,0,0-.31-0.265,2.674,2.674,0,0,1-.36-0.274,1.214,1.214,0,0,1-.31-0.512,0.071,0.071,0,0,0,.08-0.079,7.658,7.658,0,0,1,1.26.456c0.2,0.09.51,0.23,0.92,0.421a9.317,9.317,0,0,1,.36,2.622A8.71,8.71,0,0,1,3096.4,844.4Zm-1.78-1.682a2.181,2.181,0,0,0-.16.385c-0.07.19-.15,0.469-0.25,0.837a1.24,1.24,0,0,0,.52-0.516c0.22-.376.33-0.574,0.35-0.6v-0.476c-0.1.077-.18,0.137-0.23,0.182C3094.74,842.627,3094.67,842.688,3094.62,842.722Z" transform="translate(-3080 -828)"></path>
+</svg></div>
+          <div class="text-with-img">Decouvrir</div>
+        </div>
+      </div>
+      <div data-url="#" class="btn">
+        <div class="btn-content">
+          <div class="btn-text">notre gamme de saxophones</div>
+        </div>
+      </div>
+      <div data-url="#" class="btn btn-blue">
+        <div class="btn-content">
+          <div class="btn-text">notre gamme de saxophones</div>
+        </div>
+      </div>
+      <div data-url="#" class="btn btn-secondary">
+        <div class="btn-content">
+          <div class="button-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-2 {
+        fill: #000;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Forme_830" data-name="Forme 830" class="cls-2" d="M3097.07,830.927A10,10,0,1,0,3100,838,9.632,9.632,0,0,0,3097.07,830.927ZM3096.4,844.4a9.061,9.061,0,0,1-12,.722q0.06-.6.12-1.579a1.637,1.637,0,0,1,.45-0.805,1.519,1.519,0,0,0,.43-0.821,1.553,1.553,0,0,0-.83-0.965,3.093,3.093,0,0,0-1.16-.583,2.783,2.783,0,0,1-1.08-.52c-0.47-.359-0.79-0.609-0.98-0.749h-0.34a9.987,9.987,0,0,1-.06-1.1,8.718,8.718,0,0,1,2.65-6.4,9.274,9.274,0,0,1,1.54-1.258q-0.1.274-.27,0.73a5.237,5.237,0,0,0-.35,1.329,0.645,0.645,0,0,0,.06.3,1.331,1.331,0,0,0,.26.29,4.818,4.818,0,0,1,.94-0.738c0.19-.113.43-0.251,0.73-0.413a1.191,1.191,0,0,0,.46-0.48,2.159,2.159,0,0,0,.17-0.948,0.723,0.723,0,0,0-.16-0.48,3.491,3.491,0,0,1-.29-0.393,9.013,9.013,0,0,1,3.31-.594c0.13,0,.25,0,0.38.007a1.227,1.227,0,0,0-.4.349,2.817,2.817,0,0,0-.46.913,0.447,0.447,0,0,1,.54.107,0.572,0.572,0,0,1,.17.369,0.738,0.738,0,0,1-.47.714,1.81,1.81,0,0,1-.8.159,1.263,1.263,0,0,0-.39-0.075,0.3,0.3,0,0,0-.32.353,1.4,1.4,0,0,0,.08.337,1.406,1.406,0,0,1,.08.337,0.976,0.976,0,0,1-.24.48,1.258,1.258,0,0,0-.24.393,0.446,0.446,0,0,0,.16.321,0.641,0.641,0,0,0,.44.155,0.5,0.5,0,0,0,.31-0.115,3.179,3.179,0,0,0,.3-0.274,2.658,2.658,0,0,1,1.01-.643,0.629,0.629,0,0,0,.27.33,1.041,1.041,0,0,0,.37.146,1.741,1.741,0,0,1,.11-0.369,0.652,0.652,0,0,1,.28-0.028,1.519,1.519,0,0,1,.81.4,1.115,1.115,0,0,1,.55.754,0.714,0.714,0,0,1-.48.436,3.9,3.9,0,0,1-.98-0.237,3.9,3.9,0,0,0-1.12-.238,4.064,4.064,0,0,0-.77.155,6.639,6.639,0,0,0-.66.194,7.07,7.07,0,0,0-.59.976,4.2,4.2,0,0,0-.48,1.809,1.956,1.956,0,0,0,.63,1.388,1.9,1.9,0,0,0,1.35.635,1.477,1.477,0,0,0,.55-0.119,1.634,1.634,0,0,1,.56-0.119,0.891,0.891,0,0,1,.8.477,1.543,1.543,0,0,1,.24.833,3.481,3.481,0,0,1-.28,1.19,3.279,3.279,0,0,0-.28,1.19,9.016,9.016,0,0,0,.17,1.222,7.3,7.3,0,0,0,.47,1.753,1.528,1.528,0,0,0,.93-0.373,2.353,2.353,0,0,0,.52-0.789c0.17-.442.31-0.782,0.41-1.019a4.671,4.671,0,0,1,.6-1.072c0.04-.055.21-0.242,0.5-0.559q0.48-.512.78-0.881a3.651,3.651,0,0,0,1.02-2.011,2.535,2.535,0,0,0-.76-1.829c-0.29-.275-0.5-0.481-0.65-0.619a3.88,3.88,0,0,1-.58-0.686v-0.4a6.177,6.177,0,0,1,1.48.742c0.65,0.4.98,0.607,0.98,0.607a0.6,0.6,0,0,0,.48-0.234,0.558,0.558,0,0,0,.16-0.362,0.817,0.817,0,0,0-.13-0.5,1.049,1.049,0,0,0-.31-0.265,2.674,2.674,0,0,1-.36-0.274,1.214,1.214,0,0,1-.31-0.512,0.071,0.071,0,0,0,.08-0.079,7.658,7.658,0,0,1,1.26.456c0.2,0.09.51,0.23,0.92,0.421a9.317,9.317,0,0,1,.36,2.622A8.71,8.71,0,0,1,3096.4,844.4Zm-1.78-1.682a2.181,2.181,0,0,0-.16.385c-0.07.19-.15,0.469-0.25,0.837a1.24,1.24,0,0,0,.52-0.516c0.22-.376.33-0.574,0.35-0.6v-0.476c-0.1.077-.18,0.137-0.23,0.182C3094.74,842.627,3094.67,842.688,3094.62,842.722Z" transform="translate(-3080 -828)"></path>
+</svg></div>
+          <div class="text-with-img">notre gamme de saxophone</div>
+        </div>
+      </div>
+      <div data-url="#" class="btn btn-secondary">
+        <div class="btn-content">
+          <div class="btn-text">notre gamme de saxophones</div>
+        </div>
+      </div>
+      <div class="ui-container">
+        <div data-url="#" class="btn btn-white">
+          <div class="btn-content">
+            <div class="button-img w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Forme_830" data-name="Forme 830" class="cls-1" d="M3097.07,830.927A10,10,0,1,0,3100,838,9.632,9.632,0,0,0,3097.07,830.927ZM3096.4,844.4a9.061,9.061,0,0,1-12,.722q0.06-.6.12-1.579a1.637,1.637,0,0,1,.45-0.805,1.519,1.519,0,0,0,.43-0.821,1.553,1.553,0,0,0-.83-0.965,3.093,3.093,0,0,0-1.16-.583,2.783,2.783,0,0,1-1.08-.52c-0.47-.359-0.79-0.609-0.98-0.749h-0.34a9.987,9.987,0,0,1-.06-1.1,8.718,8.718,0,0,1,2.65-6.4,9.274,9.274,0,0,1,1.54-1.258q-0.1.274-.27,0.73a5.237,5.237,0,0,0-.35,1.329,0.645,0.645,0,0,0,.06.3,1.331,1.331,0,0,0,.26.29,4.818,4.818,0,0,1,.94-0.738c0.19-.113.43-0.251,0.73-0.413a1.191,1.191,0,0,0,.46-0.48,2.159,2.159,0,0,0,.17-0.948,0.723,0.723,0,0,0-.16-0.48,3.491,3.491,0,0,1-.29-0.393,9.013,9.013,0,0,1,3.31-.594c0.13,0,.25,0,0.38.007a1.227,1.227,0,0,0-.4.349,2.817,2.817,0,0,0-.46.913,0.447,0.447,0,0,1,.54.107,0.572,0.572,0,0,1,.17.369,0.738,0.738,0,0,1-.47.714,1.81,1.81,0,0,1-.8.159,1.263,1.263,0,0,0-.39-0.075,0.3,0.3,0,0,0-.32.353,1.4,1.4,0,0,0,.08.337,1.406,1.406,0,0,1,.08.337,0.976,0.976,0,0,1-.24.48,1.258,1.258,0,0,0-.24.393,0.446,0.446,0,0,0,.16.321,0.641,0.641,0,0,0,.44.155,0.5,0.5,0,0,0,.31-0.115,3.179,3.179,0,0,0,.3-0.274,2.658,2.658,0,0,1,1.01-.643,0.629,0.629,0,0,0,.27.33,1.041,1.041,0,0,0,.37.146,1.741,1.741,0,0,1,.11-0.369,0.652,0.652,0,0,1,.28-0.028,1.519,1.519,0,0,1,.81.4,1.115,1.115,0,0,1,.55.754,0.714,0.714,0,0,1-.48.436,3.9,3.9,0,0,1-.98-0.237,3.9,3.9,0,0,0-1.12-.238,4.064,4.064,0,0,0-.77.155,6.639,6.639,0,0,0-.66.194,7.07,7.07,0,0,0-.59.976,4.2,4.2,0,0,0-.48,1.809,1.956,1.956,0,0,0,.63,1.388,1.9,1.9,0,0,0,1.35.635,1.477,1.477,0,0,0,.55-0.119,1.634,1.634,0,0,1,.56-0.119,0.891,0.891,0,0,1,.8.477,1.543,1.543,0,0,1,.24.833,3.481,3.481,0,0,1-.28,1.19,3.279,3.279,0,0,0-.28,1.19,9.016,9.016,0,0,0,.17,1.222,7.3,7.3,0,0,0,.47,1.753,1.528,1.528,0,0,0,.93-0.373,2.353,2.353,0,0,0,.52-0.789c0.17-.442.31-0.782,0.41-1.019a4.671,4.671,0,0,1,.6-1.072c0.04-.055.21-0.242,0.5-0.559q0.48-.512.78-0.881a3.651,3.651,0,0,0,1.02-2.011,2.535,2.535,0,0,0-.76-1.829c-0.29-.275-0.5-0.481-0.65-0.619a3.88,3.88,0,0,1-.58-0.686v-0.4a6.177,6.177,0,0,1,1.48.742c0.65,0.4.98,0.607,0.98,0.607a0.6,0.6,0,0,0,.48-0.234,0.558,0.558,0,0,0,.16-0.362,0.817,0.817,0,0,0-.13-0.5,1.049,1.049,0,0,0-.31-0.265,2.674,2.674,0,0,1-.36-0.274,1.214,1.214,0,0,1-.31-0.512,0.071,0.071,0,0,0,.08-0.079,7.658,7.658,0,0,1,1.26.456c0.2,0.09.51,0.23,0.92,0.421a9.317,9.317,0,0,1,.36,2.622A8.71,8.71,0,0,1,3096.4,844.4Zm-1.78-1.682a2.181,2.181,0,0,0-.16.385c-0.07.19-.15,0.469-0.25,0.837a1.24,1.24,0,0,0,.52-0.516c0.22-.376.33-0.574,0.35-0.6v-0.476c-0.1.077-.18,0.137-0.23,0.182C3094.74,842.627,3094.67,842.688,3094.62,842.722Z" transform="translate(-3080 -828)"></path>
+</svg></div>
+            <div class="text-with-img">notre gamme de saxophone</div>
+          </div>
+        </div>
+        <div data-url="#" class="btn btn-white">
+          <div class="btn-content">
+            <div class="btn-text">notre gamme de saxophones</div>
+          </div>
+        </div>
+        <div data-url="#" class="btn btn-white-bg">
+          <div class="btn-content">
+            <div class="btn-text">notre gamme de saxophones</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-block w-form">
+        <form id="email-form-2" name="email-form-2" data-name="Email Form 2">
+          <div class="formulaire-section">
+            <div class="formulaire-title-bloc">
+              <h2 class="formulaire-section-title">Champs classique</h2>
+            </div><input type="text" class="textfield w-input" maxlength="256" name="nom-6" data-name="Nom 6" placeholder="Nom*" id="nom-6" required=""><input type="tel" class="textfield w-input" maxlength="256" name="nom-6" data-name="Nom 6" placeholder="Téléphone*" id="nom-6" required=""><input type="email" class="textfield w-input" maxlength="256" name="nom-6" data-name="Nom 6" placeholder="Email*" id="nom-6" required=""><input type="password" class="textfield w-input" maxlength="256" name="nom-6" data-name="Nom 6" placeholder="Mot de passe*" id="nom-6" required="">
+            <div class="select-box">
+              <div class="icon w-icon-dropdown-toggle"></div><select id="field" name="field" class="select-field-3 w-select"><option value="">Select box</option><option value="First">First Choice</option><option value="Second">Second Choice</option><option value="Third">Third Choice</option></select></div>
+            <div data-delay="0" class="dropdown-filter form w-dropdown">
+              <div class="dropdown w-dropdown-toggle">
+                <div class="icon w-icon-dropdown-toggle"></div>
+                <div>Dropdown box</div>
+              </div>
+              <nav class="dropdown-filter-list w-dropdown-list"><a href="#" class="dropdown-link w-dropdown-link">France</a><a href="#" class="dropdown-link w-dropdown-link">Etats-Unis</a><a href="#" class="dropdown-link w-dropdown-link">Allemagne</a><a href="#" class="dropdown-link w-dropdown-link">Chine</a><a href="#" class="dropdown-link w-dropdown-link">Grande-Bretagne</a><a href="#" class="dropdown-link w-dropdown-link">Italie</a><a href="#" class="dropdown-link w-dropdown-link">Norvège</a><a href="#" class="dropdown-link w-dropdown-link">Thailande</a><a href="#" class="dropdown-link w-dropdown-link">Singapoure</a><a href="#" class="dropdown-link w-dropdown-link">Brésil</a><a href="#" class="dropdown-link w-dropdown-link">Israel</a><a href="#" class="dropdown-link w-dropdown-link">Australie</a></nav>
+            </div><textarea placeholder="Votre bio" maxlength="5000" id="bio-detail" name="bio-detail" data-name="Bio Detail" class="textarea w-input"></textarea></div>
+          <div class="formulaire-section">
+            <div class="formulaire-title-bloc">
+              <h2 class="formulaire-section-title">Upload</h2>
+            </div>
+            <div class="inputfile-block">
+              <div class="input-img"></div>
+              <div class="hidden-input-file w-embed"><input type="file" class="textfield inputfile"></div>
+            </div>
+            <div class="inputfile-block">
+              <div class="input-img"></div>
+              <div class="hidden-input-file w-embed"><input type="file" class="textfield inputfile"></div>
+            </div>
+            <div class="inputfile-block">
+              <div class="input-img"></div>
+              <div class="hidden-input-file w-embed"><input type="file" class="textfield inputfile"></div>
+            </div>
+            <div class="inputfile-block">
+              <div class="input-img"></div>
+              <div class="hidden-input-file w-embed"><input type="file" class="textfield inputfile"></div>
+            </div>
+            <div class="inputfile-block">
+              <div class="input-img"></div>
+              <div class="hidden-input-file w-embed"><input type="file" class="textfield inputfile"></div>
+            </div>
+          </div>
+        </form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-title">Restez à l&#x27;écoute</div>
+    <div class="form-block-newsletter w-form">
+      <form id="email-form" name="email-form" data-name="Email Form" class="form"><input type="email" class="footer-newsletter-filed w-input" maxlength="256" name="name-2" data-name="Name 2" placeholder="Email" id="name-2"><input type="submit" value="Envoyer" data-wait="Please wait..." class="submit-button w-button"></form>
+      <div class="success-message w-form-done">
+        <div class="text-block-4">Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+    <div class="footer-rgpd">En renseignant votre adresse email, vous acceptez de recevoir nos offres commerciales par email et vous prenez connaissance de notre <a href="#" class="link-2">politique de confidentialité. </a> <br>Vous pouvez vous désinscrire à l&#x27;aide des liens de désinscription ou en nous contactant ici.</div>
+    <div class="footer-links"><a href="formulaire-contact.html" class="footer-link-text">Formulaire de contact</a><a href="job-list.html" class="footer-link-text">Offres d&#x27;emploi</a><a href="faq.html" class="footer-link-text">FAQ</a><a href="espace-pro-presse.html" class="footer-link-text">Espace Pro/Presse</a></div>
+    <div class="footer-bottom-links"><a href="#" class="footer-bottom-link">Mentions légales</a><a href="#" class="footer-bottom-link">Politique de confidentialité</a><a href="#" class="footer-bottom-link">Cookies</a><a href="#" class="footer-bottom-link">Gestion des données personnelles</a></div>
+  </footer>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/henri-selmer.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://thomasobadia.github.io/webflow-test/js/menu.js"></script>
+  <style>
+.btn path {
+  transition: all ease-in-out 500ms;
+}
+.btn path, .btn.btn-white path{
+    fill:#fff
+}
+.btn.btn-white-bg path,.btn.btn-secondary path {
+    fill:#000
+}
+.btn.btn-white-bg path ,.btn.btn-secondary:hover path {
+    fill:#fff
+}
+.arrow{
+ outline: 0px solid transparent;
+ }
+.arrow .arrow_stroke {
+stroke:rgb(191, 191, 191);
+}
+.arrow .arrow_fill {
+fill:rgb(191, 191, 191);
+}
+.arrow:hover .arrow_stroke {
+stroke:#4075e5;
+}
+.arrow:hover .arrow_fill {
+fill:#4075e5;
+}
+@media (min-width: 990px) {
+  .section-header-fixed{
+    position: fixed !important;
+  }
+  .section-header-absolute{
+    position: absolute !important;
+  }
+}
+</style>
+  <script>
+$(document).ready(function () {
+  	// Handle webflow links 
+  	$('[data-url]').replaceWith(function() {
+        console.log($(this).classList)
+        return $('<a/>', {
+            html: this.innerHTML,
+            class: $(this).prop("classList"),
+            href:$(this).data('url')
+        });
+    });
+  	// SCRIPT filtre sticky & ancres
+    if ($('body').hasClass('sticky-filter')) {
+        updateScroll()
+        updateClassActive()
+        $(document).on('scroll', function () {
+            updateScroll(), updateClassActive()
+        })
+        $(document).on('resize', function () {
+            updateScroll()
+        })
+        $('.blog-filters-link').on('click', function (e) {
+            scrollTo(e)
+        })
+    }
+  	// SCRIPT Intro animation
+  	if($('body').hasClass('animated-intro')){
+        updatePosition()
+        $(document).on('scroll', function(){updatePosition()})
+        introAnimation()
+    }
+})
+function introAnimation () {
+    if(window.matchMedia("(min-width:990px)").matches) {
+        if($(document).scrollTop() == 0){
+            $('body').addClass('body-no-overflow')
+            TweenMax.to($('.apparition-container'),1.5,{width: 70 +'vw', ease: Power2.easeOut, onComplete: function(){
+                disableAnimationContainer()
+                $('body').removeClass('body-no-overflow')
+            }} )
+            animateTypo()
+        } else{
+            disableAnimationContainer()
+            animateTypo()
+        }
+    } else {
+        disableAnimationContainer()
+        animateTypo()
+    }
+}
+function disableAnimationContainer(){
+    $('.apparition-container').css('width','auto')
+    $('.apparition-container').css('height','auto')
+    $('.apparition-container').css('position','static')
+}
+function animateTypo () {
+    TweenMax.to($('.title-typo-animation'),1.5,{x: 0 +'%', ease: Power2.easeOut, delay: 0 } )
+    TweenMax.to($('.title-typo-animation'),1.5, {autoAlpha:1 , ease: Power2.easeOut, delay: 0 } )
+    TweenMax.to($('.title-animation'),1.25,{x: 0 +'%', ease: Power2.easeOut, delay: 0.25  })
+    TweenMax.to($('.title-animation'),1.25,{autoAlpha:1 ,ease: Power2.easeOut, delay: 0.25  })
+}
+function updatePosition (){
+    if(window.matchMedia("(min-width:990px)").matches) {
+        let breakPoint = 50
+        let scrollFromTop = $(document).scrollTop() / window.innerHeight *100
+        let imageZoom = scrollFromTop * 30 / breakPoint + 70
+        let parallaxValue = (scrollFromTop-breakPoint) * (75-breakPoint) / (100 - breakPoint) + breakPoint
+				let alpha = 200 - scrollFromTop - breakPoint
+        if(scrollFromTop >= breakPoint){
+            $('.section-header-img').addClass('section-header-absolute')
+            $('.section-header-img').css('margin-top', parallaxValue +'vh')
+            $('.header-img').css('height','100vh')
+            $('.header-img').css('max-width','100%')
+            $('.header-img').css('width', '100vw')
+            $('.header-img').css('opacity',alpha/100)
+        }else{
+            $('.section-header-img').css('margin-top','0')
+            $('.header-img').css('height', imageZoom + 'vh')
+            $('.header-img').css('width', imageZoom + 'vw')
+            $('.section-header-img').removeClass('section-header-absolute')
+        }
+    }else {
+        $('.header-img').css('height','50vh')
+        $('.section-header-img').css('height','50vh')
+        $('.header-img-full').css('height','50vh')
+    }
+}
+function updateScroll() {
+    let scrollTop = $(window).scrollTop(),
+        elementOffset = $('.blog-list-top').offset().top,
+        distance = (elementOffset - scrollTop)
+    if (distance <= $(window).innerHeight() * 0.1) {
+        $('.navbar').fadeOut()
+        $('.navbar-blue-elment').fadeOut(200)
+    } else {
+        $('.navbar').fadeIn()
+        $('.navbar-blue-elment').fadeIn(200)
+    }
+}
+function scrollTo(e) {
+    let anchorNumber = e.target.dataset.anchor
+    let target = $(document).find(`[data-target='${anchorNumber}']`)
+    let targetTop = target.offset().top - 20 - $('.blog-list-top').height()
+    $([document.documentElement, document.body]).animate({
+        scrollTop: targetTop
+    }, {
+        queue: false,
+        duration: 300,
+        easing: 'swing'
+    });
+    updateClassActive()
+}
+function updateClassActive() {
+    let isActive
+    $('.blog-filters-link').each(function (index) {
+        let target = $(document).find(`[data-target='${index}']`)
+        let targetTop = target.offset().top - 200 - $('.blog-list-top').height()
+        if (Math.round($(window).scrollTop()) >= Math.round(targetTop)) {
+            isActive = index
+        }
+    })
+    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+        isActive = $('.blog-filters-link').length - 1
+    }
+    if ($(window).scrollTop() < $(document).find(`[data-target='0']`).offset().top - 20 - $('.blog-list-top').height()) {
+        isActive = 0
+    }
+    $('.blog-filters-link').removeClass('active')
+    $(document).find(`[data-anchor='${isActive}']`).addClass('active')
+}
+</script>
+  <script>
+function readURL(input,target) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      target.parent().parent().find('.input-img').css('background-image', 'url('+e.target.result+')');
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$(".inputfile").change(function() {
+  readURL(this,$(this));
+});
+$(".input-img").on('click',function() {
+$(this).parent().find('.inputfile').trigger('click');
+});
+</script>
+</body>
+</html>
