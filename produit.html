@@ -1007,6 +1007,7 @@ function updateClassActive() {
 </script>
   <script>
 
+
 (function(global){
     var module = global.noise = {};
   
@@ -1367,9 +1368,7 @@ prev.addEventListener('click', (e) => {prevSong()})
 
 
 function nextSong() {
-    if(init){
-        initSound()
-    }
+  
     if(currentSong < playlist.length - 1){
         currentSong++
         console.log(currentSong)
@@ -1382,14 +1381,15 @@ function nextSong() {
     titleText.innerHTML = audioTitle[currentSong]
     artistText.innerHTML = audioArtist[currentSong]
     el.src = playlist[currentSong]
+    if(init){
+        initSound()
+    }
     el.play()
 }
 
 
 function prevSong() {
-    if(init){
-        initSound()
-    }
+    
     if(currentSong == 0){
         currentSong = playlist.length -1
     }else{
@@ -1399,6 +1399,9 @@ function prevSong() {
     titleText.innerHTML = audioTitle[currentSong]
     artistText.innerHTML = audioArtist[currentSong]
     el.src = playlist[currentSong]
+    if(init){
+        initSound()
+    }
     el.play()
 }
 
